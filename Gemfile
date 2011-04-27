@@ -11,7 +11,7 @@ gem "annotate"
 
 group :development do
   gem "jquery-rails"
-  gem 'nifty-generators', :path => "~/ruby/rails/nifty-generators"
+#  gem 'nifty-generators', :path => "~/ruby/rails/nifty-generators"
   gem "rspec-rails" #rails g rspec:install
 end
 
