@@ -11,3 +11,5 @@ e87c13: !ruby/object:Dooby::Task
   todo: opinion can't be blank with alert message :done
 1365d6: !ruby/object:Dooby::Task 
   todo: dont update list with own opinion :done
+a59cee: !ruby/object:Dooby::Task 
+  todo: opinions should be listed after updated_at :done

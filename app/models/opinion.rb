@@ -3,9 +3,9 @@ class Opinion < ActiveRecord::Base
 
   attr_accessible :content, :user_id
 
-  validates :user_id, :presence => true
+  validates :user_id, :presence => true, :uniqueness => true
   validates :content, :presence => true
-
+  
   def username; user.name end
 end
 

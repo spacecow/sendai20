@@ -18,3 +18,12 @@ And an opinion exists with user: that user, content: "My own opinion"
 When I go to the welcome page
 Then I should not see "My own opinion" within the opinions listing
 But the "My Opinion" field should contain "My own opinion"
+
+@order
+Scenario: Opinions should be ordered after time of update
+Given a user exists
+And an opinion exists with content: "second", user: that user, updated_at: "2011-4-27 17:12"
+And a user exists
+And an opinion exists with content: "first", user: that user, updated_at: "2011-4-27 17:11"
+When I go to the welcome page
+Then I should see "first" within the first opinions listing
