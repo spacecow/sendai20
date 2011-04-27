@@ -7,6 +7,7 @@ module ApplicationHelper
   def lbl(s); chain(:label,s) end
   def new(s); t2(:new,s) end
   def pl(s); t(s).match(/\w/) ? t(s).pluralize : t(s) end
+  def save(s); t2(:save,s) end
   def submit(s); t2(:submit,s) end
   def sure?; t('message.sure?') end
   def t2(s1,s2); t(lbl(s1), :obj => t(s2)) end

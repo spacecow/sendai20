@@ -14,7 +14,7 @@ class OpinionsController < ApplicationController
 
   def create
     if @opinion.save
-      redirect_to welcome_path, :notice => created(:opinion)
+      redirect_to welcome_path, :notice => saved(:opinion)
     else
       render :action => 'new'
     end
@@ -25,7 +25,7 @@ class OpinionsController < ApplicationController
 
   def update
     if @opinion.update_attributes(params[:opinion])
-      redirect_to @opinion, :notice  => updated(:opinion)
+      redirect_to @opinion, :notice  => saved(:opinion)
     else
       render :action => 'edit'
     end
@@ -38,5 +38,5 @@ class OpinionsController < ApplicationController
 
   private
 
-    def create_user_opinion; @opinion = current_user.opinions.build(params[:opinion]) end
+    def create_user_opinion; @opinion = current_user.build_opinion(params[:opinion]) end
 end

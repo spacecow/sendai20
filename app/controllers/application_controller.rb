@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
   def ftd(s); d("formtastic.labels.#{s.to_s}") end  
   def notify(act); t("notice.#{act}") end
   def pl(s); t(s).match(/\w/) ? t(s).pluralize : t(s) end  
+  def saved(s); success(:saved,s) end
   def success(act,mdl); t("success.#{act}",:obj=>d(mdl)) end
   def success_p(act,mdl); t("success.#{act}",:obj=>dp(mdl)) end
   def success_p(act,owner,mdl); t("success.#{act}",:obj=>t(:possessive,:owner=>owner,:obj=>dp(mdl))) end

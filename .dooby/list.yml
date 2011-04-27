@@ -3,3 +3,5 @@
   todo: polling for changes :done
 e87c13: !ruby/object:Dooby::Task 
   todo: first deploy :done
+670ab8: !ruby/object:Dooby::Task 
+  todo: user has one opinion :done

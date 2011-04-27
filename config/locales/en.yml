@@ -23,6 +23,7 @@ en:
     list: "List %{obj}"
     new: "New %{obj}"
     remove: "Remove %{obj}"
+    save: "Save %{obj}"
     send: "Send %{obj}"
     show: "Show %{obj}"
     submit: "Submit %{obj}"
@@ -47,6 +48,7 @@ en:
   success:
     created: "Successfully created %{obj}."
     deleted: "Successfully deleted %{obj}."
+    saved: "Successfully saved %{obj}."
     updated: "Successfully updated %{obj}."  
   formtastic:
     labels:

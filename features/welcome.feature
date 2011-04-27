@@ -16,9 +16,10 @@ Scenario: Create an opinion
 Given I am logged in as member
 When I go to the welcome page
 And I fill in "My Opinion" with "My own opinion"
-And I press "Submit Opinion"
+And I press "Save Opinion"
 Then an opinion should exist with content: "My own opinion", user: that user
 And 1 opinions should exist
+And I should see "Successfully saved opinion." as notice flash message
 And I should be on the welcome page
 
 Scenario: A logged in user should not see his own opinion listed
@@ -26,6 +27,7 @@ Given I am logged in as member
 And an opinion exists with user: that user, content: "My own opinion"
 When I go to the welcome page
 Then I should not see "My own opinion" within the opinions listing
+But the "My Opinion" field should contain "My own opinion"
 
-Scenario: Listed opinions are tagged with its user's name
+Scenario: Ajax reload after saved opinion
 
