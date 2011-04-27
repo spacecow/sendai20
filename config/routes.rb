@@ -8,7 +8,7 @@ Sendai20::Application.routes.draw do
   match 'logout' => 'sessions#destroy', :as => :logout
   match 'login' => 'sessions#new', :as => :login
 
-  resources :opinions
+  resources :opinions, :only => [:create,:update]
   resources :sessions
   resources :users do
     member do

@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
     can :create, User
-
+    
     if user
       if user.role? :god
         can :manage, :all
@@ -11,17 +11,15 @@ class Ability
         if user.role?(:member) || user.role?(:mini_admin) || user.role?(:admin)
           can :update, User, :id => user.id
           can :show, User
-          can :manage, Opinion
-#          can :create, Opinion
-#          can :update, Opinion, :user_id => user.id
+          can :create, Opinion
+          can :update, Opinion, :user_id => user.id
         end
         if user.role?(:mini_admin) || user.role?(:admin)
           can [:index,:update], User
-          can :update, Opinion
         end
         if user.role? :admin
           can [:edit_roles, :update_roles, :destroy], User
-          can :destroy, Opinion
+          can [:update], Opinion
         end
       end
     end

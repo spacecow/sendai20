@@ -19,7 +19,7 @@ class OpinionsController < ApplicationController
       flash[:alert] = "Opinion cannot be saved blank."
     end
     respond_to do |f|
-      f.html {redirect_to welcome_path}
+      f.html {redirect_to root_path}
       f.js
     end    
   end
@@ -34,7 +34,7 @@ class OpinionsController < ApplicationController
       flash[:alert] = "Opinion cannot be saved blank."
     end
     respond_to do |f|
-      f.html {redirect_to welcome_path}
+      f.html {redirect_to root_path}
       f.js
     end
   end
@@ -46,5 +46,5 @@ class OpinionsController < ApplicationController
 
   private
 
-    def create_user_opinion; @opinion = current_user.build_opinion(params[:opinion]) end
+    def create_user_opinion; @opinion = current_user.build_opinion(params[:opinion]) if current_user end
 end

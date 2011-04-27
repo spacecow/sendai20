@@ -41,21 +41,21 @@ describe UsersController do
       if %w(new create show).include?(action)
         it "should reach the #{action} page" do
           send("#{req}", "#{action}", :id => @other.id)
-          response.redirect_url.should_not eq(root_url)
+          response.redirect_url.should_not eq(welcome_url)
         end
       elsif %w(edit update).include?(action)
         it "should reach his own #{action} page" do
           send("#{req}", "#{action}", :id => @own.id)
-          response.redirect_url.should_not eq(root_url)
+          response.redirect_url.should_not eq(welcome_url)
         end
         it "should not reach someone else's #{action} page" do
           send("#{req}", "#{action}", :id => @other.id)
-          response.redirect_url.should eq(root_url)
+          response.redirect_url.should eq(welcome_url)
         end            
       else
         it "should not reach the #{action} page" do
           send("#{req}", "#{action}", :id => @other.id)
-          response.redirect_url.should eq(root_url)
+          response.redirect_url.should eq(welcome_url)
         end
       end
     end    
@@ -72,12 +72,12 @@ describe UsersController do
       if %w(new create show index edit update).include?(action)
         it "should reach the #{action} page" do
           send("#{req}", "#{action}", :id => @other.id)
-          response.redirect_url.should_not eq(root_url)
+          response.redirect_url.should_not eq(welcome_url)
         end
       else
         it "should not reach the #{action} page" do
           send("#{req}", "#{action}", :id => @other.id)
-          response.redirect_url.should eq(root_url)
+          response.redirect_url.should eq(welcome_url)
         end
       end
     end    
@@ -93,7 +93,7 @@ describe UsersController do
     users_controller_actions.each do |action,req|
       it "should reach the #{action} page" do
         send("#{req}", "#{action}", :id => @other.id)
-        response.redirect_url.should_not eq(root_url)
+        response.redirect_url.should_not eq(welcome_url)
       end
     end    
   end
@@ -108,7 +108,7 @@ describe UsersController do
     users_controller_actions.each do |action,req|
       it "should reach the #{action} page" do
         send("#{req}", "#{action}", :id => @other.id)
-        response.redirect_url.should_not eq(root_url)
+        response.redirect_url.should_not eq(welcome_url)
       end
     end    
   end  

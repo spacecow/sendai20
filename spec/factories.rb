@@ -5,5 +5,6 @@ Factory.define :user do |f|
   f.password "abc123"
 end
 
-Factory.define :opinion do
+Factory.define :opinion do |f|
+  f.content "Default factory content"
 end
