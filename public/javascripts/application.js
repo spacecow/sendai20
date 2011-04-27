@@ -1,6 +1,11 @@
 $(function() {
+  $("div#my_opinion form").submit(function() {
+    $.post(this.action, $(this).serialize(), null, "script");
+    return false;
+  });
+
   if($("ul#opinions").length > 0) {
-    setTimeout(updateComments, 10000)
+    setTimeout(updateComments, 10000);
   }
 });
 

@@ -2,7 +2,6 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :index, Opinion
     can :create, User
 
     if user
@@ -12,7 +11,9 @@ class Ability
         if user.role?(:member) || user.role?(:mini_admin) || user.role?(:admin)
           can :update, User, :id => user.id
           can :show, User
-          can [:create,:show], Opinion
+          can :manage, Opinion
+#          can :create, Opinion
+#          can :update, Opinion, :user_id => user.id
         end
         if user.role?(:mini_admin) || user.role?(:admin)
           can [:index,:update], User

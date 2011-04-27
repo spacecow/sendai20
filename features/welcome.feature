@@ -29,5 +29,15 @@ When I go to the welcome page
 Then I should not see "My own opinion" within the opinions listing
 But the "My Opinion" field should contain "My own opinion"
 
-Scenario: Ajax reload after saved opinion
+@javascript
+Scenario: Edit an opinion
+Given I am logged in as member
+And an opinion exists with content: "This is my opinion.", user: that user
+When I go to the welcome page
+And I fill in "My Opinion" with "My second opinion"
+And I press "Update Opinion"
+Then I should see "Successfully updated opinion." as notice flash message
+And an opinion should exist with user: that user, content: "My second opinion"
+And 1 opinions should exist
+And I should be on the welcome page
 

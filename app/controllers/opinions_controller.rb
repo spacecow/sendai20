@@ -25,7 +25,11 @@ class OpinionsController < ApplicationController
 
   def update
     if @opinion.update_attributes(params[:opinion])
-      redirect_to @opinion, :notice  => saved(:opinion)
+      flash[:notice] = updated(:opinion)
+      respond_to do |f|
+        f.html {redirect_to welcome_path}
+        f.js
+      end
     else
       render :action => 'edit'
     end
