@@ -1,0 +1,22 @@
+<% title pl(:opinion) %>
+
+<table>
+  <tr>
+    <th><%= t('formtastic.labels.name') %></th>
+    <th><%= t('formtastic.labels.user_id') %></th>
+  </tr>
+  <% for opinion in @opinions %>
+    <tr>
+      <td><%= opinion.name %></td>
+      <td><%= opinion.user_id %></td>
+      <td><%= link_to t(:show), opinion if can? :show, opinion %></td>
+      <td><%= link_to t(:edit), edit_opinion_path(opinion) if can? :edit, opinion %></td>
+      <td><%= link_to t(:del), opinion, :confirm => sure?, :method => :delete if can? :destroy, opinion %></td>
+    </tr>
+  <% end %>
+</table>
+
+<div id="bottom_links">
+  <%= link_to new(:opinion),
+  new_opinion_path if can? :new, Opinion %>
+</div>

@@ -1,0 +1,8 @@
+<% title new(:opinion) %>
+
+<%= render 'form' %>
+
+<div id="bottom_links">
+  <%= link_to view(:opinion),
+  opinions_path if can? :index, @Opinion %>
+</div>

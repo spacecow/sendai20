@@ -1,0 +1,6 @@
+
+autotest-all: --color --require features --require lib --format progress features
+autotest: --color --require features --require lib features
+default: --format progress --strict --tags ~@wip features -r features/step_definitions -r features/support
+wip: --drb --tags @wip:3 --wip features
+rerun: --drb --format progress features --format rerun --out rerun.txt --strict --tags ~@wip

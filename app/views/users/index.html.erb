@@ -1,0 +1,13 @@
+<table>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.username %></td>
+      <td>
+        <%= link_to t(:show), user if can? :show, user %>
+        <%= link_to t(:edit), edit_user_path(user) if can? :edit, user %>
+        <%= link_to pl(:role), edit_roles_user_path(user) if can? :edit_roles, user %>
+        <%= link_to t(:del), user, :confirm => sure?, :method => :delete if can? :destroy, user %>
+      </td>
+    </tr>
+  <% end %>
+</ul>

@@ -1,0 +1,20 @@
+<% title "Opinion" %>
+
+<p>
+  <strong><%= t('formtastic.labels.name') %>:</strong>
+  <%= @opinion.name %>
+</p>
+<p>
+  <strong><%= t('formtastic.labels.user_id') %>:</strong>
+  <%= @opinion.user_id %>
+</p>
+
+<div id="bottom_links">
+  <% if can? :edit, @opinion %>
+    <%= link_to t(:edit), edit_opinion_path(@opinion) %> |
+  <% end %>
+  <% if can? :delete, @opinion %>
+    <%= link_to t(:delete), @opinion, :confirm => 'Are you sure?', :method => :delete %> |
+  <% end %>
+  <%= link_to view(:opinion), opinions_path if can? :index, Opinion %>
+</div>

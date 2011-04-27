@@ -1,0 +1,110 @@
+@import "compass/css3/border-radius"
+@import "compass/css3/gradient"
+
+$spacing: 10px
+$main_width: 900px
+$label_width: 150px
+$label_margin: $spacing
+$label_full_width: $label_width + $label_margin
+
+$font_size: 14px
+$a_size: $font_size - 2px
+$h1_size: $font_size * 2
+
+$bg_colour: #ddd
+$link_colour: #4B7399
+$alert_dark: #933
+$notice_dark: #396
+$alert_light: #f33
+$notice_light: #4CC417
+
+$opinion_container_width: 300px
+$textarea_height: 100px
+$textarea_width: 300px
+
+@mixin custom_gradient($light, $dark, $corner: 10px)
+  color: white
+  font-weight: bold
+  padding: 5px
+  +border-radius($corner)
+  +linear-gradient(color-stops($light, $dark))
+
+@mixin opinion_container_base
+  border: 1px solid black
+  padding: 20px 40px
+  float: left
+
+div.clear
+  clear: both
+  height: 0
+  overflow: hidden
+
+a
+  color: $link_colour
+  text-decoration: none
+  font-size: $a_size
+
+h1
+  font-size: $h1_size
+  margin-bottom: 2*$spacing
+
+div#flash_notice
+  float: left  
+  margin-bottom: 5px
+  padding: 3px 10px
+  border: 1px solid black
+  +custom_gradient($notice_light,$notice_dark)
+div#flash_alert
+  float: left
+  margin-bottom: 5px
+  padding: 3px 10px
+  border: 1px solid black
+  +custom_gradient($alert_light,$alert_dark)
+
+div#container
+  font: normal $font_size "Helvetica Neue", Arial, Helvetica, sans-serif
+  width: $main_width
+  margin: 4*$spacing auto
+  div#contents
+    padding: 2*$spacing 4*$spacing
+    border: 1px solid black
+    +border-radius($spacing)
+    +linear-gradient(color-stops(white, $bg_colour 33%, white), left)
+    div#opinion_container
+      +opinion_container_base
+      ul#opinions
+        width: 300px
+        float: left
+        border: 1px solid black
+    div#my_opinion_container
+      +opinion_container_base
+      div#my_opinion
+        margin: 0
+        padding: 0
+        width: 300px
+        float: left
+        border: 1px solid black
+    div#user_nav
+      float: right
+    form.formtastic
+      li.error
+        +linear-gradient(color-stops(white, $alert_dark 33%, white), left)
+        p.inline-errors
+          margin-left: $label_full_width
+          color: white
+          text-shadow: 1px 1px 1px black
+      li
+        list-style-type: none
+        label
+          float: left
+          width: $label_width
+          text-align: right
+          margin: 2px $label_margin 0 0
+        textarea
+          width: $textarea_width
+          height: $textarea_height
+          border: 0
+      input.submit
+        margin: $spacing 0 0 $label_full_width
+      input.small_submit
+        margin-top: $spacing

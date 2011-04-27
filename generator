@@ -1,0 +1,19 @@
+#!/bin/sh
+
+bundle
+rm public/index.html
+rake db:create:all
+rails g cancan:ability
+compass init rails . --using blueprint/semantic
+rails g jquery:install
+rails g formtastic:install
+rails g rspec:install
+rails g cucumber:install --capybara --rspec
+rails g pickle --paths --email
+rails g nifty:authentication --rspec
+rails g nifty:scaffold opinion name:string user_id:integer
+rake db:migrate
+rake db:test:clone
+rm -rf spec/fixtures
+rm -rf spec/views
+rm -rf spec/helpers

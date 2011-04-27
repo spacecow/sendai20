@@ -1,0 +1,10 @@
+<% title edit(:opinion) %>
+
+<%= render 'form' %>
+
+<div id="bottom_links">
+  <% if can? :show, @opinion -%>
+    <%= link_to t(:show), @opinion %> |
+  <% end %>
+  <%= link_to view(:opinion), opinions_path if can? :index, Opinion %>
+</div>

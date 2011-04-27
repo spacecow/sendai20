@@ -1,0 +1,16 @@
+<div id="opinion_container">
+  <ul id="opinions">
+    <% @opinions.each do |opinion| %>
+    <%= render opinion %>
+    <% end %>
+  </ul>
+</div>
+
+<% if current_user %>
+<div id="my_opinion_container">
+  <div id="my_opinion">
+    <%= render "opinions/form" %>
+  </div>
+</div><% end %>
+
+<div class="clear"></div>
