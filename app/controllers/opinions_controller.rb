@@ -14,10 +14,14 @@ class OpinionsController < ApplicationController
 
   def create
     if @opinion.save
-      redirect_to welcome_path, :notice => saved(:opinion)
+      flash[:notice] = saved(:opinion)
     else
-      render :action => 'new'
+      flash[:alert] = "Opinion cannot be saved blank."
     end
+    respond_to do |f|
+      f.html {redirect_to welcome_path}
+      f.js
+    end    
   end
 
   def edit
@@ -26,12 +30,12 @@ class OpinionsController < ApplicationController
   def update
     if @opinion.update_attributes(params[:opinion])
       flash[:notice] = updated(:opinion)
-      respond_to do |f|
-        f.html {redirect_to welcome_path}
-        f.js
-      end
     else
-      render :action => 'edit'
+      flash[:alert] = "Opinion cannot be saved blank."
+    end
+    respond_to do |f|
+      f.html {redirect_to welcome_path}
+      f.js
     end
   end
 

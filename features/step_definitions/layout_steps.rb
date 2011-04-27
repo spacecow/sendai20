@@ -1,6 +1,9 @@
 Then /^I should see "([^"]*)" as (\w+) flash message$/ do |txt,cat|
   Then %(I should see "#{txt}" within "div#flash_#{cat}")
 end
+Then /^I should see no (\w+) flash message$/ do |cat|
+  Then %(I should see no "flash_#{cat}" section)
+end
 
 Then /^I should see "([^"]*)" as title$/ do |txt|
   Then %(I should see "#{txt}" within "h1")

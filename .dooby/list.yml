@@ -7,3 +7,7 @@ e87c13: !ruby/object:Dooby::Task
   todo: user has one opinion :done
 0d9f90: !ruby/object:Dooby::Task 
   todo: save opinion, ajax reload :done
+a91b99: !ruby/object:Dooby::Task 
+  todo: dont update list with own opinion
+7ea40b: !ruby/object:Dooby::Task 
+  todo: opinion can't be blank with alert message :done
