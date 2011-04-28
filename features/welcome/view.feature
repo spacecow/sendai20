@@ -12,7 +12,6 @@ Scenario: View for a user not logged in
 Given a user exists with username: "tester", name: "Test User"
 And an opinion exists with content: "This is my opinion.", user: that user
 When I go to the welcome page
-Then show me the page
 Then I should see "tester Test User" and "This is my opinion." within the first opinions listing
 But I should see no "my_opinion" section
 
@@ -35,4 +34,9 @@ And an opinion exists with content: "second", user: that user, updated_at: "2011
 And a user exists
 And an opinion exists with content: "first", user: that user, updated_at: "2011-4-27 17:11"
 When I go to the welcome page
-Then I should see "first" within the first opinions listing
+Then I should see "first" within the second opinions listing
+
+Scenario: Opinions are limited to 5
+Given an opinion exists
+When I go to the welcome page
+

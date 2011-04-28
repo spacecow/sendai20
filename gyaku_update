@@ -1,0 +1,28 @@
+#!/bin/sh  
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/users_controller.rb app/controllers/users_controller.rb
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/user.rb app/models/user.rb
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/views/erb/signup.html.erb app/views/users/new.html.erb
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/views/erb/login.html.erb app/views/sessions/new.html.erb
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/index.feature features/users/index.feature
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/roles.feature features/users/roles.feature
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/login.feature features/users/login.feature
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/user_steps.rb features/step_definitions/user_steps.rb
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/users_controller_spec.rb spec/controllers/users_controller_spec.rb
+  
+cp ../nifty-generators/lib/generators/nifty/layout/templates/application_controller.rb app/controllers/application_controller.rb
+cp ../nifty-generators/lib/generators/nifty/layout/templates/application_helper.rb app/helpers/application_helper.rb
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/routes.rb config/routes.rb
+cp ../nifty-generators/lib/generators/nifty/layout/templates/application.sass app/stylesheets/application.sass
+cp ../nifty-generators/lib/generators/nifty/layout/templates/en.yml config/locales/en.yml
+cp ../nifty-generators/lib/generators/nifty/layout/templates/ja.yml config/locales/ja.yml
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/factories.rb spec/factories.rb
+  
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/ability.rb app/models/ability.rb
+  
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/list_steps.rb features/step_definitions/list_steps.rb
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/table_steps.rb features/step_definitions/table_steps.rb
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/functions.rb features/step_definitions/functions.rb
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/web_steps_own.rb features/step_definitions/web_steps_own.rb
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/layout_steps.rb features/step_definitions/layout_steps.rb
+  
+cp ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/update update

@@ -6,5 +6,6 @@ Factory.define :user do |f|
 end
 
 Factory.define :opinion do |f|
+  f.association :user
   f.content "Default factory content"
 end
