@@ -8,5 +8,6 @@ class OperatorController < ApplicationController
     
     @polled_opinions = Opinion.where("updated_at > ?", Time.at(params[:after].to_i)).order("updated_at asc")
     @polled_opinions = @polled_opinions.where("user_id <> ?",current_user.id) if current_user
+    @polled_opinions = @polled_opinions.limit(5)    
   end
 end
