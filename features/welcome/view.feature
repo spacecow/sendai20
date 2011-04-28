@@ -37,6 +37,16 @@ When I go to the welcome page
 Then I should see "first" within the second opinions listing
 
 Scenario: Opinions are limited to 5
-Given an opinion exists
+Given 6 opinions exist
 When I go to the welcome page
+Then I should see a fifth opinions listing
+But I should see no sixth opinions listing
 
+Scenario: My own opinion is not listed, but opinions should still be 5
+Given 4 opinions exist
+And I am logged in as member
+And a opinion exists with user: that user
+And an opinion exist
+When I go to the welcome page
+Then I should see a fifth opinions listing
+But I should see no sixth opinions listing

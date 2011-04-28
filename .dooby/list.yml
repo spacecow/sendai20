@@ -25,5 +25,5 @@ eb3c75: !ruby/object:Dooby::Task
   todo: invert the order of the opinion listing :done
 c1f644: !ruby/object:Dooby::Task 
   todo: animate scroll update of opinions :done
-bb7f1d: !ruby/object:Dooby::Task 
-  todo: make a 5 limit with only sql
+b32036: !ruby/object:Dooby::Task 
+  todo: make a 5 limit with only sql :done

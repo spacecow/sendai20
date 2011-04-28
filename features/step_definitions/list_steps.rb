@@ -1,3 +1,5 @@
+# TEXT --------------------------
+
 Then /^I should see "([^"]*)" within the (\w+) listing$/ do |txt,order|
   with_scope(list_no order) do
     page.should have_content(txt)
@@ -15,6 +17,16 @@ end
 Then /^I should not see "([^"]*)" within the (.+) listing$/ do |txt,lst|
   Then %(I should not see "#{txt}" within "ul##{underscore lst}")
 end
+
+# EXISTENCE ----------------------
+
+Then /^I should see a (\w+) (\w+) listing$/ do |order,lst|
+  page.should have_css(list_no(lst,order))
+end
+Then /^I should see no (\w+) (\w+) listing$/ do |order,lst|
+  page.should have_no_css(list_no(lst,order))
+end
+
 
 # AND ----------------------------
 
