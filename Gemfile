@@ -8,6 +8,7 @@ gem 'cancan' #rails g cancan:ability
 gem "bcrypt-ruby", :require => "bcrypt"
 gem "mocha", :group => :test
 gem "annotate"
+gem "forgery"
 
 group :development do
   gem "jquery-rails"
