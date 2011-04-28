@@ -27,3 +27,5 @@ c1f644: !ruby/object:Dooby::Task
   todo: animate scroll update of opinions :done
 b32036: !ruby/object:Dooby::Task 
   todo: make a 5 limit with only sql :done
+a67a91: !ruby/object:Dooby::Task 
+  todo: take away as many opinions as are added :done
