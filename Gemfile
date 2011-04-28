@@ -12,7 +12,7 @@ gem "forgery"
 
 group :development do
   gem "jquery-rails"
-#  gem 'nifty-generators', :path => "~/ruby/rails/nifty-generators"
+  gem 'nifty-generators', :git => "https://github.com/spacecow/nifty-generators.git"
   gem "rspec-rails" #rails g rspec:install
 end
 

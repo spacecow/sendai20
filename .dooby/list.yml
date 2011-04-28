@@ -13,8 +13,6 @@ e87c13: !ruby/object:Dooby::Task
   todo: dont update list with own opinion :done
 a59cee: !ruby/object:Dooby::Task 
   todo: opinions should be listed after updated_at :done
-c78664: !ruby/object:Dooby::Task 
-  todo: model setting
 4cdde7: !ruby/object:Dooby::Task 
   todo: opinion listing layout :done
 "131025": !ruby/object:Dooby::Task 
@@ -29,3 +27,5 @@ b32036: !ruby/object:Dooby::Task
   todo: make a 5 limit with only sql :done
 a67a91: !ruby/object:Dooby::Task 
   todo: take away as many opinions as are added :done
+5e7ad8: !ruby/object:Dooby::Task 
+  todo: model setting :doing
