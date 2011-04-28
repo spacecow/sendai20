@@ -2,7 +2,9 @@ $('div#flash_notice').remove();
 $('div#flash_alert').remove();
 <% if flash[:notice] %>
 $('div#contents').before('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div><div class="clear"></div>');
+$('div#flash_notice').css("opacity",0,0).animate({opacity: 1.0});
 <% end %>
 <% if flash[:alert] %>
-$('div#contents').before('<div id="flash_alert"><%= escape_javascript(flash.delete(:alert)) %></div><div class="clear"></div>');  
+$('div#contents').before('<div id="flash_alert"><%= escape_javascript(flash.delete(:alert)) %></div><div class="clear"></div>');
+$('div#flash_alert').css("opacity",0,0).animate({opacity: 1.0});
 <% end %>
