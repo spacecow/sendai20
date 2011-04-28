@@ -12,6 +12,7 @@ Scenario: View for a user not logged in
 Given a user exists with username: "tester", name: "Test User"
 And an opinion exists with content: "This is my opinion.", user: that user
 When I go to the welcome page
+Then show me the page
 Then I should see "tester Test User" and "This is my opinion." within the first opinions listing
 But I should see no "my_opinion" section
 

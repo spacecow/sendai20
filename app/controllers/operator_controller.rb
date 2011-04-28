@@ -1,6 +1,6 @@
 class OperatorController < ApplicationController
   def welcome
-    @opinions = Opinion.order("updated_at asc")
+    @opinions = Opinion.order("updated_at desc").limit(5)
     @opinions.reject!{|e| e.user_id == current_user.id} if current_user
     
     @opinion = (current_user && current_user.opinion) || Opinion.new

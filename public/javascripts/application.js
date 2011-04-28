@@ -10,7 +10,7 @@ $(function() {
 });
 
 function updateComments() {
-  var after = $("li.opinion:last-child").attr("data-time");
+  var after = $("li.opinion:first-child").attr("data-time");
   $.getScript("/operator/welcome.js?after=" + after);
   setTimeout(updateComments, 10000);
 }

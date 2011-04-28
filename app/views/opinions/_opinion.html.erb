@@ -3,7 +3,7 @@
     <% if can? :show, opinion.user %>
       <%= link_to opinion.username, opinion.user %>
     <% else %>
-      <%= opinion.user_name %>
+      <%= opinion.username %>
     <% end %>
   </span>
   <span id="name"><%= opinion.user_name %></span><br />
@@ -13,7 +13,7 @@
       <span id="continue"><%= link_to "つづく", opinion.user %></span>
     <% end %>
   </span><br />
-  <span id="ago"><%= time_ago_in_words opinion.created_at %> ago</span>
+  <span id="ago"><%= time_ago_in_words opinion.updated_at %> ago</span>
 </li>
 
 
