@@ -1,24 +1,24 @@
-/* line 42, ../../app/stylesheets/application.sass */
+/* line 44, ../../app/stylesheets/application.sass */
 div.clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 47, ../../app/stylesheets/application.sass */
+/* line 49, ../../app/stylesheets/application.sass */
 a {
   color: #4b7399;
   text-decoration: none;
   font-size: 12px;
 }
 
-/* line 52, ../../app/stylesheets/application.sass */
+/* line 54, ../../app/stylesheets/application.sass */
 h1 {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-/* line 56, ../../app/stylesheets/application.sass */
+/* line 58, ../../app/stylesheets/application.sass */
 div#flash_notice {
   float: left;
   margin-bottom: 5px;
@@ -40,7 +40,7 @@ div#flash_notice {
   background-image: linear-gradient(top, #4cc417, #339966);
 }
 
-/* line 62, ../../app/stylesheets/application.sass */
+/* line 64, ../../app/stylesheets/application.sass */
 div#flash_alert {
   float: left;
   margin-bottom: 5px;
@@ -62,14 +62,15 @@ div#flash_alert {
   background-image: linear-gradient(top, #ff3333, #993333);
 }
 
-/* line 69, ../../app/stylesheets/application.sass */
+/* line 71, ../../app/stylesheets/application.sass */
 div#container {
   font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif;
   width: 900px;
   margin: 40px auto;
 }
-/* line 73, ../../app/stylesheets/application.sass */
+/* line 75, ../../app/stylesheets/application.sass */
 div#container div#contents {
+  height: 550px;
   padding: 20px 20px;
   border: 1px solid black;
   -moz-border-radius: 10px;
@@ -84,7 +85,7 @@ div#container div#contents {
   background-image: -o-linear-gradient(left, #ffffff, #dddddd 33%, #ffffff);
   background-image: linear-gradient(left, #ffffff, #dddddd 33%, #ffffff);
 }
-/* line 78, ../../app/stylesheets/application.sass */
+/* line 81, ../../app/stylesheets/application.sass */
 div#container div#contents div#profile_container {
   border: 1px solid black;
   -moz-border-radius: 10px;
@@ -96,7 +97,7 @@ div#container div#contents div#profile_container {
   padding: 20px 20px;
   float: left;
 }
-/* line 80, ../../app/stylesheets/application.sass */
+/* line 83, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container {
   border: 1px solid black;
   -moz-border-radius: 10px;
@@ -107,46 +108,47 @@ div#container div#contents div#opinion_container {
   border-radius: 10px;
   padding: 20px 20px;
   float: left;
+  height: 450px;
 }
-/* line 82, ../../app/stylesheets/application.sass */
+/* line 86, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions {
   width: 300px;
   float: left;
 }
-/* line 85, ../../app/stylesheets/application.sass */
+/* line 89, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion {
   border-bottom: 1px solid gray;
   padding: 5px 0;
   list-style-type: none;
 }
-/* line 89, ../../app/stylesheets/application.sass */
+/* line 93, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#username {
   font-weight: bold;
   font-size: 14px;
 }
-/* line 92, ../../app/stylesheets/application.sass */
+/* line 96, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#username a {
   font-size: 14px;
 }
-/* line 94, ../../app/stylesheets/application.sass */
+/* line 98, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#name {
   font-size: 12px;
   color: gray;
 }
-/* line 97, ../../app/stylesheets/application.sass */
+/* line 101, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#ago {
   font-size: 12px;
   color: gray;
 }
-/* line 100, ../../app/stylesheets/application.sass */
+/* line 104, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li:hover {
   background: #eeeeee;
 }
-/* line 102, ../../app/stylesheets/application.sass */
+/* line 106, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li:last-child {
   border-bottom: none;
 }
-/* line 104, ../../app/stylesheets/application.sass */
+/* line 108, ../../app/stylesheets/application.sass */
 div#container div#contents div#my_opinion_container {
   border: 1px solid black;
   -moz-border-radius: 10px;
@@ -158,18 +160,18 @@ div#container div#contents div#my_opinion_container {
   padding: 20px 20px;
   float: left;
 }
-/* line 106, ../../app/stylesheets/application.sass */
+/* line 110, ../../app/stylesheets/application.sass */
 div#container div#contents div#my_opinion_container div#my_opinion {
   margin: 0;
   padding: 0;
   width: 300px;
   float: left;
 }
-/* line 111, ../../app/stylesheets/application.sass */
+/* line 115, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav {
   float: right;
 }
-/* line 114, ../../app/stylesheets/application.sass */
+/* line 118, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li.error {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(33%, #993333), color-stop(100%, #ffffff));
   background-image: -webkit-linear-gradient(left, #ffffff, #993333 33%, #ffffff);
@@ -177,34 +179,34 @@ div#container div#contents form.formtastic li.error {
   background-image: -o-linear-gradient(left, #ffffff, #993333 33%, #ffffff);
   background-image: linear-gradient(left, #ffffff, #993333 33%, #ffffff);
 }
-/* line 116, ../../app/stylesheets/application.sass */
+/* line 120, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li.error p.inline-errors {
   margin-left: 160px;
   color: white;
   text-shadow: 1px 1px 1px black;
 }
-/* line 120, ../../app/stylesheets/application.sass */
+/* line 124, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li {
   list-style-type: none;
 }
-/* line 122, ../../app/stylesheets/application.sass */
+/* line 126, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li label {
   float: left;
   width: 150px;
   text-align: right;
   margin: 2px 10px 0 0;
 }
-/* line 127, ../../app/stylesheets/application.sass */
+/* line 131, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li textarea {
   width: 300px;
   height: 100px;
   border: 0;
 }
-/* line 131, ../../app/stylesheets/application.sass */
+/* line 135, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic input.submit {
   margin: 10px 0 0 160px;
 }
-/* line 133, ../../app/stylesheets/application.sass */
+/* line 137, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic input.small_submit {
   margin-top: 10px;
 }

@@ -1,1 +1,2 @@
-$("ul#opinions").prepend("<%= raw escape_javascript(render(@polled_opinions))%>")
+$("<%= raw escape_javascript(render(@polled_opinions))%>").hide().css("opacity",0,0).prependTo("ul#opinions").slideDown("slow").animate({opacity: 1.0});
+$("ul#opinions li:last-child").remove();

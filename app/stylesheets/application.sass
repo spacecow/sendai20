@@ -18,9 +18,11 @@ $notice_dark: #396
 $alert_light: #f33
 $notice_light: #4CC417
 
+$contents_height: 550px
 $contents_padding_width: 2*$spacing
 $contents_padding_height: 2*$spacing
 $opinion_container_width: 300px
+$opinion_container_height: 450px
 $opinion_container_padding_width: 2*$spacing
 $opinion_container_padding_height: 2*$spacing
 $textarea_height: 100px
@@ -71,6 +73,7 @@ div#container
   width: $main_width
   margin: 4*$spacing auto
   div#contents
+    height: $contents_height
     padding: $contents_padding_height $contents_padding_width
     border: 1px solid black
     +border-radius($spacing)
@@ -79,6 +82,7 @@ div#container
       +container_base
     div#opinion_container
       +container_base
+      height: $opinion_container_height
       ul#opinions
         width: 300px
         float: left

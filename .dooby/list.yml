@@ -15,8 +15,6 @@ a59cee: !ruby/object:Dooby::Task
   todo: opinions should be listed after updated_at :done
 c78664: !ruby/object:Dooby::Task 
   todo: model setting
-2ae09b: !ruby/object:Dooby::Task 
-  todo: scroll update
 4cdde7: !ruby/object:Dooby::Task 
   todo: opinion listing layout :done
 "131025": !ruby/object:Dooby::Task 
@@ -25,3 +23,5 @@ eb3c75: !ruby/object:Dooby::Task
   todo: forgery gem for populating the database :done
 7a4c2c: !ruby/object:Dooby::Task 
   todo: invert the order of the opinion listing :done
+c1f644: !ruby/object:Dooby::Task 
+  todo: animate scroll update of opinions :done
