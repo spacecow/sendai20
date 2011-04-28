@@ -19,3 +19,5 @@ c78664: !ruby/object:Dooby::Task
   todo: scroll update
 4cdde7: !ruby/object:Dooby::Task 
   todo: opinion listing layout :done
+"131025": !ruby/object:Dooby::Task 
+  todo: user page :done

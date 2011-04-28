@@ -33,7 +33,7 @@ $textarea_width: 300px
   +border-radius($corner)
   +linear-gradient(color-stops($light, $dark))
 
-@mixin opinion_container_base
+@mixin container_base
   border: 1px solid black
   +border-radius($spacing)
   padding: $opinion_container_padding_height $opinion_container_padding_width
@@ -75,8 +75,10 @@ div#container
     border: 1px solid black
     +border-radius($spacing)
     +linear-gradient(color-stops(white, $bg_colour 33%, white), left)
+    div#profile_container
+      +container_base
     div#opinion_container
-      +opinion_container_base
+      +container_base
       ul#opinions
         width: 300px
         float: left
@@ -86,22 +88,26 @@ div#container
           list-style-type: none
           span#username
             font-weight: bold
+            font-size: 14px
+            a
+              font-size: 14px
           span#name
             font-size: 12px
             color: gray
           span#ago
             font-size: 12px
             color: gray
+        li:hover
+          background: #eee
         li:last-child
           border-bottom: none
     div#my_opinion_container
-      +opinion_container_base
+      +container_base
       div#my_opinion
         margin: 0
         padding: 0
         width: 300px
         float: left
-        border: 1px solid black
     div#user_nav
       float: right
     form.formtastic

@@ -16,6 +16,18 @@ Then /^I should not see "([^"]*)" within the (.+) listing$/ do |txt,lst|
   Then %(I should not see "#{txt}" within "ul##{underscore lst}")
 end
 
+# AND ----------------------------
+
+Then /^I should see "([^"]*)" and "([^"]*)" within the (\w+) (.+) listing$/ do |txt1,txt2,order,lst|
+  Then %(I should see "#{txt1}" within the #{order} #{lst} listing)
+  And %(I should see "#{txt2}" within the #{order} #{lst} listing)
+end
+
+# LINKS --------------------------
+
+When /^I follow "([^"]*)" within the (\w+) (.+) listing$/ do |lnk,order,lst|
+  When %(I follow "#{lnk}" within "#{list_no(lst,order)}")
+end
 
 def list_no(lst=nil,order)
   if lst.nil?

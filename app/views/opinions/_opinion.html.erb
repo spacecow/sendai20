@@ -1,7 +1,18 @@
 <li class="opinion" data-time="<%= opinion.updated_at.to_i %>">
-  <span id="username"><%= opinion.username %></span>
+  <span id="username">
+    <% if can? :show, opinion.user %>
+      <%= link_to opinion.username, opinion.user %>
+    <% else %>
+      <%= opinion.user_name %>
+    <% end %>
+  </span>
   <span id="name"><%= opinion.user_name %></span><br />
-  <span id="content"><%= opinion.content %></span><br />
+  <span id="content">
+    <%= truncate(opinion.content,:length=>100) %>
+    <% if opinion.content.length > 100  %>
+      <span id="continue"><%= link_to "つづく", opinion.user %></span>
+    <% end %>
+  </span><br />
   <span id="ago"><%= time_ago_in_words opinion.created_at %> ago</span>
 </li>
 
