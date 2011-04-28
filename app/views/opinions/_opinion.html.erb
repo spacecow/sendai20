@@ -1,3 +1,8 @@
 <li class="opinion" data-time="<%= opinion.updated_at.to_i %>">
-  <%= opinion.username %>: <%= opinion.content %>
+  <span id="username"><%= opinion.username %></span>
+  <span id="name"><%= opinion.user_name %></span><br />
+  <span id="content"><%= opinion.content %></span><br />
+  <span id="ago"><%= time_ago_in_words opinion.created_at %> ago</span>
 </li>
+
+

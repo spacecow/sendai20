@@ -6,7 +6,8 @@ class Opinion < ActiveRecord::Base
   validates :user_id, :presence => true, :uniqueness => true
   validates :content, :presence => true
   
-  def username; user.name end
+  def username; user.username end
+  def user_name; user.name end
 end
 
 

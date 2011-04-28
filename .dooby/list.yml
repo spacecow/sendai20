@@ -13,3 +13,9 @@ e87c13: !ruby/object:Dooby::Task
   todo: dont update list with own opinion :done
 a59cee: !ruby/object:Dooby::Task 
   todo: opinions should be listed after updated_at :done
+c78664: !ruby/object:Dooby::Task 
+  todo: model setting
+2ae09b: !ruby/object:Dooby::Task 
+  todo: scroll update
+4cdde7: !ruby/object:Dooby::Task 
+  todo: opinion listing layout :done
