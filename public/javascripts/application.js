@@ -11,6 +11,6 @@ $(function() {
 
 function updateComments() {
   var after = $("li.opinion:first-child").attr("data-time");
-  $.getScript("/operator/welcome.js?after=" + after);
+  $.getScript("/operator/" + $("ul").attr("data-action") + ".js?after=" + after);
   setTimeout(updateComments, 10000);
 }

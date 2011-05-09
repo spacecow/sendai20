@@ -1,0 +1,7 @@
+<% @polled_opinions.each do |polled| %>
+$("<%= raw escape_javascript(render(polled))%>").hide().css("opacity",0,0).appendTo("ul#opinions").slideDown("slow").animate({opacity: 1.0});
+<% end %>
+
+while($("ul#opinions li").size() > 5){
+  $("ul#opinions li:first-child").remove();
+}

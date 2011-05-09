@@ -1,12 +1,12 @@
 <li class="opinion" data-time="<%= opinion.updated_at.to_i %>">
   <span id="username">
     <% if can? :show, opinion.user %>
-      <%= link_to opinion.username, opinion.user %>
+      <%= link_to opinion.user_name, opinion.user %>
     <% else %>
-      <%= opinion.username %>
+      <%= opinion.user_name %>
     <% end %>
-  </span>
-  <span id="name"><%= opinion.user_name %></span><br />
+  </span><br />
+<!--  <span id="name"><%= opinion.user_name %></span><br /> -->
   <span id="content">
     <%= truncate(opinion.content,:length=>100) %>
     <% if opinion.content.length > 100  %>
