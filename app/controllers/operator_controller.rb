@@ -34,4 +34,10 @@ class OperatorController < ApplicationController
       @polled_opinions = Opinion.all(:offset => rand(size),:limit => 1)
     end
   end
+
+  def scrollup
+    @opinions = Opinion.order("updated_at desc")
+    @opinions = @opinions.where("user_id <> ?",current_user.id) if current_user
+    @opinions = @opinions.limit(5)
+  end
 end

@@ -39,7 +39,6 @@ $textarea_width: 300px
   border: 1px solid black
   +border-radius($spacing)
   padding: $opinion_container_padding_height $opinion_container_padding_width
-  float: left
 
 div.clear
   clear: both
@@ -78,11 +77,40 @@ div#container
     border: 1px solid black
     +border-radius($spacing)
     +linear-gradient(color-stops(white, $bg_colour 33%, white), left)
+    div#frame
+      position: relative
+      overflow: hidden
+      height: $opinion_container_height
+      +container_base
+      div#opinion_container
+        position: absolute
+        width: 300px
+        top: 100px
+        div.opinion
+          border-bottom: 1px solid gray
+          padding: 5px 0
+          list-style-type: none
+          span#username
+            font-weight: bold
+            font-size: 14px
+            a
+              font-size: 14px
+          span#name
+            font-size: 12px
+            color: gray
+          span#ago
+            font-size: 12px
+            color: gray
+        div.opinion:hover
+          background: #eee
+        div.opinion:last-child
+          border-bottom: none
+
     div#profile_container
       +container_base
     div#opinion_container
-      +container_base
-      height: $opinion_container_height
+      //+container_base
+      //height: $opinion_container_height
       ul#opinions
         width: 300px
         float: left

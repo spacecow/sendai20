@@ -1,8 +1,10 @@
 Sendai20::Application.routes.draw do
   get "operator/welcome"
   get "operator/welcome_up"
+  get "operator/scrollup"
   match 'welcome' => 'operator#welcome'
   match 'welcome_up' => 'operator#welcome_up'
+  match 'scrollup' => 'operator#scrollup'
   root :to => "operator#welcome"
   
   match 'user/edit' => 'users#edit', :as => :edit_current_user
