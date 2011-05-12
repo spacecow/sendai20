@@ -67,6 +67,10 @@ div#flash_alert
   border: 1px solid black
   +custom_gradient($alert_light,$alert_dark)
 
+$frame_height: 450px
+$frame_width: 300px
+$frame_margin: 20px
+$frame_container_width: $frame_width + 2*$frame_margin
 div#container
   font: normal $font_size "Helvetica Neue", Arial, Helvetica, sans-serif
   width: $main_width
@@ -77,34 +81,36 @@ div#container
     border: 1px solid black
     +border-radius($spacing)
     +linear-gradient(color-stops(white, $bg_colour 33%, white), left)
-    div#frame
-      position: relative
-      overflow: hidden
-      height: $opinion_container_height
-      +container_base
-      div#opinion_container
-        position: absolute
-        width: 300px
-        top: 100px
-        div.opinion
-          border-bottom: 1px solid gray
-          padding: 5px 0
-          list-style-type: none
-          span#username
-            font-weight: bold
-            font-size: 14px
-            a
+    div#frame_container
+      width: $frame_container_width
+      border: 1px solid black
+      +border-radius(10px)
+      div#frame
+        position: relative
+        overflow: hidden
+        height: $frame_height
+        width: $frame_width
+        margin: $frame_margin
+        div#opinions
+          position: absolute
+          top: -5px
+          div.opinion
+            border-top: 1px solid gray
+            padding: 5px 0
+            list-style-type: none
+            span#username
+              font-weight: bold
               font-size: 14px
-          span#name
-            font-size: 12px
-            color: gray
-          span#ago
-            font-size: 12px
-            color: gray
-        div.opinion:hover
-          background: #eee
-        div.opinion:last-child
-          border-bottom: none
+              a
+                font-size: 14px
+            span#name
+              font-size: 12px
+              color: gray
+            span#ago
+              font-size: 12px
+              color: gray
+          div.opinion:hover
+            background: #eee
 
     div#profile_container
       +container_base

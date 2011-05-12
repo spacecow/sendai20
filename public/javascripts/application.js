@@ -4,13 +4,13 @@ $(function() {
     return false;
   });
 
-  if($("ul#opinions").length > 0) {
-    setTimeout(updateComments, 10000);
+  if($("div#opinions").length > 0) {
+    setTimeout(updateComments, 1000);
   }
 });
 
 function updateComments() {
-  var after = $("li.opinion:first-child").attr("data-time");
-  $.getScript("/operator/" + $("ul").attr("data-action") + ".js?after=" + after);
+  //var after = $("li.opinion:first-child").attr("data-time");
+  $.getScript("/operator/" + $("div#opinions").attr("data-action") + ".js");
   setTimeout(updateComments, 10000);
 }

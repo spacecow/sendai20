@@ -38,6 +38,6 @@ class OperatorController < ApplicationController
   def scrollup
     @opinions = Opinion.order("updated_at desc")
     @opinions = @opinions.where("user_id <> ?",current_user.id) if current_user
-    @opinions = @opinions.limit(5)
+    @opinions = @opinions.limit(10)
   end
 end
