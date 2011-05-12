@@ -1,7 +1,15 @@
-<div id="opinion_container">
-  <ul id="opinions" data-action="welcome">
-    <%= render @opinions %>
-  </ul>
+<%= content_for(:head) do %>
+  <%= javascript_include_tag "welcome" %>
+<% end %>
+
+<div id="frame_container">
+  <div id="frame">
+    <div id="opinions" data-action="welcome">
+      <% @opinions.each do |opinion| %>
+        <div class="opinion"><%= render opinion %></div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <% if current_user %>

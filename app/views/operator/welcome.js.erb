@@ -1,7 +1,7 @@
-<% @polled_opinions.each do |polled| %>
-$("<%= raw escape_javascript(render(polled))%>").hide().css("opacity",0,0).prependTo("ul#opinions").slideDown("slow").animate({opacity: 1.0});
-<% end %>
-
-while($("ul#opinions li").size() > 5){
-  $("ul#opinions li:last-child").remove();
-}
+var last_child = $("div.opinion:last-child")
+var opinions = $("div#opinions")
+opinions.animate({top: -5}, "slow", function(){
+  opinions.prepend("<div class='opinion'><%= raw escape_javascript(render @polled_opinion) %></div>")
+  opinions.css("top", -$("div.opinion:first-child").height()-15);
+  last_child.remove();
+})
