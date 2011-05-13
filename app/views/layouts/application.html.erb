@@ -6,7 +6,7 @@
     <%= stylesheet_link_tag 'print.css', :media => 'print' %>
     <!--[if lt IE 8]>
       <%= stylesheet_link_tag 'ie.css', :media => 'screen, projection' %>
-    <![endif]-->   
+    <![endif]-->
     <%= stylesheet_link_tag "application", "formtastic" %>
     <%= javascript_include_tag "jquery", "rails", "application" %>
     <%= csrf_meta_tag %>
@@ -26,9 +26,11 @@
             <%= link_to t(:log_out), logout_path %>
           <% else %>
             <%= link_to t(:sign_up), signup_path %><%= t(:or) %><%= link_to t(:log_in), login_path %>
-          <% end %>
+          <% end %><br />
+          <%= link_to "scroll up", scrollup_path %><br />
+          <%= link_to "scroll down", root_path %><br />
+          <%= link_to "movie", movie_path %>
         </div>
-        <div class="clear"></div>
         <%= content_tag :h1, yield(:title) if show_title? %>
         <%= yield %>
       </div>

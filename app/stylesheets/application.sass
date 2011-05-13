@@ -82,6 +82,7 @@ div#container
     +border-radius($spacing)
     +linear-gradient(color-stops(white, $bg_colour 33%, white), left)
     div#frame_container
+      float: left
       width: $frame_container_width
       border: 1px solid black
       +border-radius(10px)
@@ -144,11 +145,11 @@ div#container
           border-bottom: none
     div#my_opinion_container
       +container_base
+      float: right
       div#my_opinion
         margin: 0
         padding: 0
         width: 300px
-        float: left
     div#user_nav
       float: right
     form.formtastic
