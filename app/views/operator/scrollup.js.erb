@@ -1,6 +1,6 @@
 var first_child = $("div.opinion:first-child")
 var opinions = $("div#opinions")
-opinions.append("<div class='opinion'><%= raw escape_javascript(render @polled_opinion) %></div>")
+opinions.append("<div class='opinion'><%= raw escape_javascript(render @polled_opinion, :trunc => true) %></div>")
 opinions.animate({top: -first_child.height()-15}, "slow", function(){
   first_child.remove();
   opinions.css("top",-5);

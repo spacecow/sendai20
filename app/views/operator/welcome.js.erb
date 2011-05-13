@@ -1,7 +1,7 @@
 var last_child = $("div.opinion:last-child")
 var opinions = $("div#opinions")
 opinions.animate({top: -5}, "slow", function(){
-  opinions.prepend("<div class='opinion'><%= raw escape_javascript(render @polled_opinion) %></div>")
+  opinions.prepend("<div class='opinion'><%= raw escape_javascript(render @polled_opinion, :trunc => true) %></div>")
   opinions.css("top", -$("div.opinion:first-child").height()-15);
   last_child.remove();
 })

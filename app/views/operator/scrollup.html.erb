@@ -1,8 +1,12 @@
+<%= content_for(:head) do %>
+  <%= javascript_include_tag "scrollup" %>
+<% end %>
+
 <div id="frame_container">
   <div id="frame">
     <div id="opinions" data-action="scrollup">
       <% @opinions.each do |opinion| %>
-        <div class="opinion"><%= render opinion %></div>
+        <div class="opinion"><%= render opinion, :trunc => true %></div>
       <% end %>
     </div>
   </div>

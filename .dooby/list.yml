@@ -31,3 +31,5 @@ c78664: !ruby/object:Dooby::Task
   todo: model setting
 a05a90: !ruby/object:Dooby::Task 
   todo: scrollup testing :done
+548c2b: !ruby/object:Dooby::Task 
+  todo: movie theme :done

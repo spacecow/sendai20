@@ -6,7 +6,7 @@
   <div id="frame">
     <div id="opinions" data-action="welcome">
       <% @opinions.each do |opinion| %>
-        <div class="opinion"><%= render opinion %></div>
+        <div class="opinion"><%= render opinion, :trunc => true %></div>
       <% end %>
     </div>
   </div>

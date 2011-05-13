@@ -7,9 +7,13 @@
 </span><br />
 <!--  <span id="name"><%= opinion.user_name %></span><br /> -->
 <span id="content">
-  <%= truncate(opinion.content,:length=>100) %>
-  <% if opinion.content.length > 100  %>
-  <span id="continue"><%= link_to "つづく", opinion.user %></span>
+  <% if trunc %>
+    <%= truncate(opinion.content,:length=>100) %>
+    <% if opinion.content.length > 100 %>
+      <span id="continue"><%= link_to "つづく", opinion.user %></span>
+    <% end %>
+  <% else %>
+    <%= opinion.content %>
   <% end %>
 </span><br />
 <span id="ago"><%= time_ago_in_words opinion.updated_at %> ago</span>
