@@ -151,17 +151,20 @@ DEPENDENCIES
   cancan
   capybara
   compass
+  cucumber (= 0.10.0)
   cucumber-rails
   database_cleaner
   factory_girl
   forgery
   formtastic
-  gherkin
+  gherkin (= 2.3.6)
   jquery-rails
+  json (= 1.4.6)
   launchy
   mocha
   mysql2
   pickle
   rails (= 3.0.5)
+  rspec-expectations (= 2.5.0)
   rspec-rails
   spork

@@ -9,6 +9,7 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem "mocha", :group => :test
 gem "annotate"
 gem "forgery"
+gem "json", "1.4.6"
 
 group :development do
   gem "jquery-rails"
@@ -18,11 +19,13 @@ end
 
 group :test do
   gem 'spork'
+  gem 'cucumber', '0.10.0'
   gem 'cucumber-rails' #rails g cucumber:install --capybara --rspec
   gem 'capybara'
   gem 'database_cleaner'
   gem 'pickle' #rails g pickle --paths --email
   gem 'launchy'
   gem 'factory_girl'
-  gem 'gherkin'
+  gem 'rspec-expectations', '2.5.0'
+  gem 'gherkin', '2.3.6'
 end

@@ -4,6 +4,7 @@ $(function() {
   if($("div#opinions").length > 0) {
     setTimeout(deleteWelcome, 4999);
     setTimeout(updateComments, 5000);
+    setTimeout(changeLogo, 1000);
   }
 });
 
@@ -16,5 +17,14 @@ function updateComments() {
   if($("div#opinions").children("div.movie").length == 1){
     $.getScript("/operator/" + $("div#opinions").attr("data-action") + ".js");
   }
+  setTimeout(movieSlide, 40000);
+}
+function movieSlide(){
   setTimeout(updateComments, 1000);
+}
+function changeLogo(){
+  var file = $("img").attr("alt")+"i";
+  $("img").attr("src","/images/" + file + ".png")
+  $("img").attr("alt",file)
+  setTimeout(changeLogo,1000)
 }

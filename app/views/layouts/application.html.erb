@@ -25,11 +25,12 @@
             <%= t('message.not_you?') %>
             <%= link_to t(:log_out), logout_path %>
           <% else %>
-            <%= link_to t(:sign_up), signup_path %><%= t(:or) %><%= link_to t(:log_in), login_path %>
-          <% end %><br />
-          <%= link_to "scroll up", scrollup_path %><br />
-          <%= link_to "scroll down", root_path %><br />
-          <%= link_to "movie", movie_path %>
+            <%= render 'operator/login_header' %>
+          <% end %>
+          <%# link_to "scroll up", scrollup_path %>
+          <%# link_to "scroll down", root_path %>
+          <%# link_to "movie", movie_path %>
+          <div class="clear"></div>
         </div>
         <%= content_tag :h1, yield(:title) if show_title? %>
         <%= yield %>
