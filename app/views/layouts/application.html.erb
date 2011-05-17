@@ -21,9 +21,10 @@
       <div id="contents">
         <div id="user_nav">
           <% if current_user %>
-            <%= t('message.welcome',:user=>current_user.username) %>
-            <%= t('message.not_you?') %>
-            <%= link_to t(:log_out), logout_path %>
+            <%# t('message.welcome',:user=>current_user.username) %>
+            <%# t('message.not_you?') %>
+            <%# link_to t(:log_out), logout_path %>
+            <%= render 'operator/logout_header' %>
           <% else %>
             <%= render 'operator/login_header' %>
           <% end %>
@@ -35,6 +36,7 @@
         <%= content_tag :h1, yield(:title) if show_title? %>
         <%= yield %>
       </div>
+      <div class="clear"></div>
     </div>
   </body>
 </html>

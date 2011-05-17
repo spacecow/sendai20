@@ -8,6 +8,7 @@ en:
   log_in: "Log in"
   login: "Login"
   log_out: "Log out"
+  logout: "Logout"
   member: "Member"
   mini_admin: "mini-admin"
   or: " or "

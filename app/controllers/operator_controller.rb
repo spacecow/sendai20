@@ -46,5 +46,7 @@ class OperatorController < ApplicationController
       offset = ids[rand(ids.count)].id
       @polled_opinion = Opinion.find(offset)
     end
+
+    @user = User.new
   end
 end

@@ -35,3 +35,5 @@ a05a90: !ruby/object:Dooby::Task
   todo: movie theme :done
 16e59a: !ruby/object:Dooby::Task 
   todo: facebook layout :done
+a143d5: !ruby/object:Dooby::Task 
+  todo: signup on first page :done

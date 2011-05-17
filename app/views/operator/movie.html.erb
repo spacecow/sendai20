@@ -17,6 +17,11 @@
   <div id="my_opinion">
     <%= render "opinions/form" %>
   </div>
-</div><% end %>
+</div>
+<% else %>
+<div id="signin">
+  <%= render 'users/form' %>
+</div>
+<% end %>
 
 <div class="clear"></div>

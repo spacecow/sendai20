@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path, :notice => t('notice.thank_you_for_signing_up')
+      redirect_to movie_path, :notice => t('notice.thank_you_for_signing_up')
     else
       render :action => 'new'
     end
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to root_path, :notice => updated(:profile)
+      redirect_to movie_path, :notice => updated(:profile)
     else
       render :action => 'edit'
     end
