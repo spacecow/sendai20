@@ -4,7 +4,7 @@ $(function() {
   if($("div#opinions").length > 0) {
     setTimeout(deleteWelcome, 4999);
     setTimeout(updateComments, 5000);
-    setTimeout(changeLogo, 1000);
+    setTimeout(changeLogo, 10000);
   }
 });
 
@@ -26,5 +26,5 @@ function changeLogo(){
   var file = $("img").attr("alt")+"i";
   $("img").attr("src","/images/" + file + ".png")
   $("img").attr("alt",file)
-  setTimeout(changeLogo,1000)
+  setTimeout(changeLogo,10000)
 }
