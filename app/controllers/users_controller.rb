@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-    @user.address = "#{@user.prefecture}#{@user.address}".strip
+    @user.full_address = "#{@user.prefecture}#{@user.address}".strip
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path, :notice => t('notice.thank_you_for_signing_up')

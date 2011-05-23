@@ -17,7 +17,7 @@ And I fill in everything except address
 And I select "<prefecture>" from "Prefecture"
 And I fill in "Address" with "<address>"
 And I press "Sign up"
-Then a user should exist with address: "<full_address>"
+Then a user should exist with full_address: "<full_address>"
 Examples:
 |prefecture|address|full_address|
 ||仙台|仙台|
