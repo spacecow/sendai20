@@ -43,3 +43,5 @@ a143d5: !ruby/object:Dooby::Task
   todo: map integration with geocoder :done
 70e1f1: !ruby/object:Dooby::Task 
   todo: add ward :done
+23fab6: !ruby/object:Dooby::Task 
+  todo: one address field :done
