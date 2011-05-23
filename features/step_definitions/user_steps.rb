@@ -1,8 +1,8 @@
 Given /^I am logged in as "([^"]*)"$/ do |user|
-  Given %(I go to the login page)
-  And %(I fill in "Username" with "#{user}")
+  Given %(I go to the root page)
+  And %(I fill in "Login" with "#{user}")
   And %(I fill in "Password" with "abc123")
-  And %(I press "Log in")
+  And %(I press "Login")
 end
 
 Given /^I am logged in as #{capture_model}$/ do |mdl|

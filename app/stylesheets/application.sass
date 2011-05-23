@@ -168,8 +168,15 @@ div#container
         input.submit
           margin-top: 5px
     form.formtastic
+      h1
+        border-bottom: 1px dotted black
+        margin-bottom: 10px
+        margin-top: 10px
+      h1.first
+        margin-top: 0
       li.error
-        +linear-gradient(color-stops(white, $alert_dark 33%, white), left)
+        //+linear-gradient(color-stops(white, $alert_dark 33%, white), left)
+        background: gray
         p.inline-errors
           margin-left: $label_full_width
           color: white

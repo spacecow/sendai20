@@ -1,6 +1,6 @@
 var first_child = $("div.movie:first-child")
 var opinions = $("div#opinions")
-var frac = (first_child.height()+450)/500
+var frac = (first_child.height()+450)/450
 opinions.append("<div class='opinion movie'><%= raw escape_javascript(render @polled_opinion, :trunc => false) %></div>")
 opinions.animate({top: -first_child.height()-15}, frac*40000, function(){
   first_child.remove();

@@ -82,12 +82,12 @@ describe User do
 end
 
 
+
 # == Schema Information
 #
 # Table name: users
 #
 #  id            :integer(4)      not null, primary key
-#  username      :string(255)
 #  email         :string(255)
 #  roles_mask    :integer(4)
 #  password_hash :string(255)
@@ -95,5 +95,8 @@ end
 #  created_at    :datetime
 #  updated_at    :datetime
 #  name          :string(255)
+#  latitude      :float
+#  longitude     :float
+#  address       :string(255)
 #
 

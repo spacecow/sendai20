@@ -2,7 +2,7 @@ Feature:
 Background:
 Given I am logged in as member
 And an opinion exists with content: "This is my opinion.", user: that user
-When I go to the welcome page
+When I go to the root page
 
 Scenario: Once opinon cannot be saved blank
 When I fill in "My Opinion" with ""

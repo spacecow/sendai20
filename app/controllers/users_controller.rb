@@ -15,7 +15,10 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to movie_path, :notice => t('notice.thank_you_for_signing_up')
     else
-      render :action => 'new'
+      @opinions = Opinion.order("updated_at desc")
+      @opinions = @opinions.where("user_id <> ?",current_user.id) if current_user
+      @opinions = @opinions.limit(1)
+      render :template => 'operator/movie'
     end
   end
 

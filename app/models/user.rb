@@ -2,15 +2,16 @@ class User < ActiveRecord::Base
   has_one :opinion
 
   # new columns need to be added here to be writable through mass assignment
-  attr_accessible :username, :email, :password, :password_confirmation, :name
+  attr_accessible :email, :password, :password_confirmation, :name, :address
 
-  attr_accessor :password
+  attr_accessor :password, :city
   before_create :set_role
   before_save :prepare_password
+  geocoded_by :address
+  after_validation :geocode
 
-  validates_presence_of :username, :name
-  validates_uniqueness_of :username, :email, :allow_blank => true
-  validates_format_of :username, :with => /^[-\w\._@]+$/i, :allow_blank => true, :message => "should only contain letters, numbers, or .-_@"
+  validates_presence_of :name
+  validates_uniqueness_of :email, :allow_blank => true
   validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
   validates_presence_of :password, :on => :create
   validates_confirmation_of :password
@@ -29,9 +30,8 @@ class User < ActiveRecord::Base
   end
   def set_role; self.roles = ["member"] if self.roles.empty? end
   
-  # login can be either username or email address
   def self.authenticate(login, pass)
-    user = find_by_username(login) || find_by_email(login)
+    user = find_by_email(login)
     return user if user && user.password_hash == user.encrypt_password(pass)
   end
 
@@ -50,12 +50,12 @@ class User < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: users
 #
 #  id            :integer(4)      not null, primary key
-#  username      :string(255)
 #  email         :string(255)
 #  roles_mask    :integer(4)
 #  password_hash :string(255)
@@ -63,5 +63,8 @@ end
 #  created_at    :datetime
 #  updated_at    :datetime
 #  name          :string(255)
+#  latitude      :float
+#  longitude     :float
+#  address       :string(255)
 #
 

@@ -23,6 +23,7 @@ cp features/step_definitions/list_steps.rb ../nifty-generators/lib/generators/ni
 cp features/step_definitions/table_steps.rb ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/table_steps.rb
 cp features/step_definitions/functions.rb ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/functions.rb
 cp features/step_definitions/web_steps_own.rb ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/web_steps_own.rb
+cp features/step_definitions/form_steps.rb ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/form_steps.rb
 cp features/step_definitions/layout_steps.rb ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/layout_steps.rb
 
 cp update ../nifty-generators/lib/generators/nifty/authentication/templates/tests/rspec/update 

@@ -70,6 +70,7 @@ GEM
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
+    geocoder (1.0.1)
     gherkin (2.3.6)
       json (>= 1.4.6)
     haml (3.0.25)
@@ -157,6 +158,7 @@ DEPENDENCIES
   factory_girl
   forgery
   formtastic
+  geocoder
   gherkin (= 2.3.6)
   jquery-rails
   json (= 1.4.6)

@@ -48,5 +48,6 @@ class OperatorController < ApplicationController
     end
 
     @user = User.new
+    @user.city = request.location.city
   end
 end

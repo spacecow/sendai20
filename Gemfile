@@ -10,6 +10,7 @@ gem "mocha", :group => :test
 gem "annotate"
 gem "forgery"
 gem "json", "1.4.6"
+gem "geocoder"
 
 group :development do
   gem "jquery-rails"

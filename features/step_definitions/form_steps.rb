@@ -46,6 +46,10 @@ When /^I create (?:a|an) (\w+) with ("[^"]*")((?:, "[^"]*")*)$/ do |mdl, arg1, a
   And %(I press "Create #{mdl.capitalize}")
 end
 
+Then /^the "([^"]*)" field should be empty$/ do |lbl|
+  %(Then the "#{lbl}" field should contain "")
+end
+
 # Functions ----------------------------
 
 def attr_no(prnt,chld,attr,ordr)

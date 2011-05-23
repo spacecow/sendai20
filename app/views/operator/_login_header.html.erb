@@ -2,11 +2,11 @@
 
 <%= form_tag sessions_path do %>
   <div id="email">
-    <%= label_tag :login, ft(:email) %><br />
+    <%= label_tag :login, t(:login) %><br />
     <%= text_field_tag :login %>
   </div>
   <div id="password">
-    <%= label_tag :password %><br />
+    <%= label_tag :password, ft(:password) %><br />
     <%= password_field_tag :password %>
   </div><br />
   <div class="clear"></div>

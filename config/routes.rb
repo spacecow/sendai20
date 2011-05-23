@@ -2,10 +2,9 @@ Sendai20::Application.routes.draw do
   get "operator/welcome"
   get "operator/scrollup"
   get "operator/movie"
-  match 'welcome' => 'operator#welcome'
+  match 'welcome' => 'operator#movie'
   match 'scrollup' => 'operator#scrollup'
   match 'movie' => 'operator#movie'
-  root :to => "operator#welcome"
   
   match 'user/edit' => 'users#edit', :as => :edit_current_user
   match 'signup' => 'users#new', :as => :signup
@@ -21,4 +20,5 @@ Sendai20::Application.routes.draw do
     end
   end
 
+  root :to => "operator#movie"
 end

@@ -240,41 +240,47 @@ div#container div#contents div#user_nav form input.submit {
   margin-top: 5px;
 }
 /* line 171, ../../app/stylesheets/application.sass */
-div#container div#contents form.formtastic li.error {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(33%, #993333), color-stop(100%, #ffffff));
-  background-image: -webkit-linear-gradient(left, #ffffff, #993333 33%, #ffffff);
-  background-image: -moz-linear-gradient(left, #ffffff, #993333 33%, #ffffff);
-  background-image: -o-linear-gradient(left, #ffffff, #993333 33%, #ffffff);
-  background-image: linear-gradient(left, #ffffff, #993333 33%, #ffffff);
+div#container div#contents form.formtastic h1 {
+  border-bottom: 1px dotted black;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-/* line 173, ../../app/stylesheets/application.sass */
+/* line 175, ../../app/stylesheets/application.sass */
+div#container div#contents form.formtastic h1.first {
+  margin-top: 0;
+}
+/* line 177, ../../app/stylesheets/application.sass */
+div#container div#contents form.formtastic li.error {
+  background: gray;
+}
+/* line 180, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li.error p.inline-errors {
   margin-left: 160px;
   color: white;
   text-shadow: 1px 1px 1px black;
 }
-/* line 177, ../../app/stylesheets/application.sass */
+/* line 184, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li {
   list-style-type: none;
 }
-/* line 179, ../../app/stylesheets/application.sass */
+/* line 186, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li label {
   float: left;
   width: 150px;
   text-align: right;
   margin: 2px 10px 0 0;
 }
-/* line 184, ../../app/stylesheets/application.sass */
+/* line 191, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li textarea {
   width: 300px;
   height: 100px;
   border: 0;
 }
-/* line 188, ../../app/stylesheets/application.sass */
+/* line 195, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic input.submit {
   margin: 10px 0 0 160px;
 }
-/* line 190, ../../app/stylesheets/application.sass */
+/* line 197, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic input.small_submit {
   margin-top: 10px;
 }
