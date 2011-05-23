@@ -9,3 +9,5 @@
   <%= f.input :password_confirmation %>
   <%= f.submit (@user.new_record? ? t(:sign_up) : update(:profile)), :class => :submit %>
 <% end %>
+
+<img id="map" data-latitude="<%= @user.latitude %>" data-longitude="<%= @user.longitude %>" />

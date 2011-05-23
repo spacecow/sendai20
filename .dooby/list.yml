@@ -39,3 +39,5 @@ a143d5: !ruby/object:Dooby::Task
   todo: signup on first page :done
 149d1b: !ruby/object:Dooby::Task 
   todo: implement geocoder :done
+11d928: !ruby/object:Dooby::Task 
+  todo: map integration with geocoder :done

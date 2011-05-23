@@ -5,6 +5,12 @@ $(function() {
     setTimeout(deleteWelcome, 4999);
     setTimeout(updateComments, 5000);
     setTimeout(changeLogo, 10000);
+
+    var latitude = $("img#map").attr("data-latitude")
+    var longitude = $("img#map").attr("data-longitude")
+    if(latitude != ""){
+      $("img#map").attr("src", mapUrl(latitude,longitude))
+    }
   }
 });
 
@@ -23,8 +29,21 @@ function movieSlide(){
   setTimeout(updateComments, 1000);
 }
 function changeLogo(){
-  var file = $("img").attr("alt")+"i";
-  $("img").attr("src","/images/" + file + ".png")
-  $("img").attr("alt",file)
+  var file = $("img#header").attr("alt")+"i";
+  $("img#header").attr("src","/images/" + file + ".png")
+  $("img#header").attr("alt",file)
   setTimeout(changeLogo,10000)
+}
+
+function mapUrl(latitude,longitude) {
+  var params = {
+    size   : "400x130",
+    maptype: "roadmap",
+    sensor : "false",
+    center : latitude +","+ longitude,
+    zoom   : 12,
+    style  : "feature:all|element:all|saturation:-100",
+    markers: "color:0xEE127B|"+latitude+","+longitude
+  }
+  return "http://maps.google.com/maps/api/staticmap?" + $.param(params);
 }

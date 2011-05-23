@@ -11,6 +11,12 @@ Examples:
 |name|can't be blank|
 |password|can't be blank|
 
+@signup
 Scenario: Sign up view
 When I go to the root page
-Then the "City" field should be empty
+And I fill in "Email" with "some@email.add"
+And I fill in "Password*" with "secret"
+And I fill in "Password confirmation" with "secret"
+And I fill in "City" with "仙台"
+And I press "Sign up"
+Then a user should exist with address: "仙台"
