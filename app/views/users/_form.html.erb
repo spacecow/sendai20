@@ -3,7 +3,9 @@
   <%= f.input :name %>
   <%# f.input :username %>
   <%= f.input :email, :label => ft(:email)+'*' %>
+  <%= f.input :prefecture, :as => :select, :collection => User::PREFECTURES %>
   <%= f.input :city %>
+  <%= f.input :ward %>
   <h1>Security</h1>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>

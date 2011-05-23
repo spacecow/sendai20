@@ -11,12 +11,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-    @user.address = @user.city
+    @user.address = "#{@user.prefecture} #{@user.city} #{@user.ward}".strip
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path, :notice => t('notice.thank_you_for_signing_up')
     else
-      p @user
       @opinions = Opinion.order("updated_at desc")
       @opinions = @opinions.where("user_id <> ?",current_user.id) if current_user
       @opinions = @opinions.limit(1)
