@@ -45,3 +45,5 @@ a143d5: !ruby/object:Dooby::Task
   todo: add ward :done
 23fab6: !ruby/object:Dooby::Task 
   todo: one address field :done
+a43af3: !ruby/object:Dooby::Task 
+  todo: prefecture and address cannot be blank

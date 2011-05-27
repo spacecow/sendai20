@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   geocoded_by :full_address
   after_validation :geocode
 
-  validates_presence_of :name
+  validates_presence_of :name, :prefecture, :address
   validates_uniqueness_of :email, :allow_blank => true
   validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
   validates_presence_of :password, :on => :create
