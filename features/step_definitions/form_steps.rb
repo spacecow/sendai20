@@ -47,6 +47,9 @@ end
 When /^I press the button$/ do
    find(:xpath, "//input[@type='submit']").click
 end
+Then /^I should see a "([^"]*)" button$/ do |arg1|
+
+end
 
 # Fields -------------------------------
 

@@ -12,10 +12,15 @@ And an opinion should exist with user: that user, content: "This is my opinion."
 And 1 opinions should exist
 And I should be on the root page
 
+Scenario: Edit opinion view
+Then the "My Opinion" field should contain "This is my opinion."
+And I should see a "Update Opinion" button
+
 Scenario: Edit an opinion
-And I fill in "My Opinion" with "My second opinion"
+Given I fill in "My Opinion" with "My second opinion"
 And I press "Update Opinion"
 Then I should see "Successfully updated opinion." as notice flash message
 And an opinion should exist with user: that user, content: "My second opinion"
-And 1 opinions should exist
+And an opinion should exist with user: that user, content: "This is my opinion."
+And 2 opinions should exist
 And I should be on the root page
