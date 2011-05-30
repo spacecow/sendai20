@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 class User < ActiveRecord::Base
-  has_one :opinion
+  has_many :opinions
 
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :email, :password, :password_confirmation, :name, :prefecture, :address

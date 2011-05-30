@@ -21,5 +21,6 @@ And I press "Update Opinion"
 Then I should see "Successfully updated opinion." as notice flash message
 But I should see no alert flash message
 And an opinion should exist with user: that user, content: "My second opinion"
-And 1 opinions should exist
+And an opinion should exist with user: that user, content: "This is my opinion."
+And 2 opinions should exist
 And I should be on the welcome page

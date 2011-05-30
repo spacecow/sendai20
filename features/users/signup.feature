@@ -13,10 +13,13 @@ Examples:
 |prefecture|can't be blank|
 |address|can't be blank|
 
-Scenario: City address
+Scenario: Signing up
 When I go to the root page
-And I fill in everything except address
+And I fill in "Name" with "Some Name"
+And I fill in "Email" with "some@email.add"
+And I fill in "Password*" with "secret"
+And I fill in "Password confirmation" with "secret"
 And I select "宮城県" from "Prefecture"
 And I fill in "Address" with "青葉区"
 And I press "Sign up"
-Then a user should exist with address: "青葉区", prefecture: "宮城県" 
+Then a user should exist with name: "Some Name", email: "some@email.add", address: "青葉区", prefecture: "宮城県" 

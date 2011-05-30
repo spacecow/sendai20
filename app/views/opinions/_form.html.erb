@@ -1,4 +1,4 @@
 <%= semantic_form_for @opinion do |f| %>
   <%= f.input :content, :label => t(:my_opinion) %>
-  <%= f.submit (current_user && current_user.opinione) ? update(:opinion) : save(:opinion) %>
+  <%= f.submit (current_user && current_user.opinions.any?) ? update(:opinion) : save(:opinion) %>
 <% end %>

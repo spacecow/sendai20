@@ -27,7 +27,6 @@ When I go to the welcome page
 Then I should not see "My own opinion" within the "opinions" section
 But the "My Opinion" field should contain "My own opinion"
 
-@order
 Scenario: Opinions should be ordered after time of update
 Given a user exists
 And an opinion exists with content: "second", user: that user, updated_at: "2011-4-27 17:12"

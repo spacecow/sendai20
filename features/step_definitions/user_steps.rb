@@ -14,9 +14,3 @@ Given /^I am logged in as member$/ do
   And %(I am logged in as that user)
 end
 
-Given /^I fill in everything except address$/ do
-  And %(I fill in "Name" with "Some Name")
-  And %(I fill in "Email" with "some@email.add")
-  And %(I fill in "Password*" with "secret")
-  And %(I fill in "Password confirmation" with "secret")
-end

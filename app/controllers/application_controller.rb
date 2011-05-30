@@ -38,6 +38,9 @@ class ApplicationController < ActionController::Base
   
   private
 
+    def current_opinion
+      @current_opinion ||= current_user.opinions.order("created_at desc").last if current_user && current_user.opinions.any?
+    end
     def current_user
       @current_user ||= User.find(session[:user_id]) if session[:user_id]
     end

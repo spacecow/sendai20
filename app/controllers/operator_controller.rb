@@ -37,7 +37,7 @@ class OperatorController < ApplicationController
     @opinions = @opinions.limit(1)
     
     @opinion = Opinion.new
-    @opinion.content = current_user.opinion.content if current_user && current_user.opinion 
+    @opinion.content = current_opinion.content if current_opinion
     if current_user
       ids = Opinion.where("user_id <> ?", current_user.id).select(:id)
     else 

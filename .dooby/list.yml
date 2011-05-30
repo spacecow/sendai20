@@ -51,5 +51,5 @@ a43af3: !ruby/object:Dooby::Task
   todo: be able to choose language in user profile
 87eaec: !ruby/object:Dooby::Task 
   todo: cleaning up after removing username and adding prefecture and address :done
-90156f: !ruby/object:Dooby::Task 
-  todo: save previous opinions :doing
+3cba04: !ruby/object:Dooby::Task 
+  todo: save previous opinions :done

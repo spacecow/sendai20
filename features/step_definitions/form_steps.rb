@@ -45,10 +45,10 @@ end
 # Buttons ------------------------------
 
 When /^I press the button$/ do
-   find(:xpath, "//input[@type='submit']").click
+  find(:xpath, "//input[@type='submit']").click
 end
-Then /^I should see a "([^"]*)" button$/ do |arg1|
-
+Then /^I should see a "([^"]*)" button$/ do |lbl|
+  page.should have_button(lbl)
 end
 
 # Fields -------------------------------
