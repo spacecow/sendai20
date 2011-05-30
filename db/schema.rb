@@ -29,7 +29,8 @@ ActiveRecord::Schema.define(:version => 20110523050314) do
     t.string   "name"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "full_address"
+    t.string   "prefecture"
+    t.string   "address"
   end
 
 end

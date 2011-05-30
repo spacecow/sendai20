@@ -9,7 +9,7 @@ And I follow "Testy Tester" within the first "opinion" section
 Then I should be on that user page
 
 Scenario: View for a user not logged in
-Given a user exists with username: "tester", name: "Test User"
+Given a user exists with name: "Test User"
 And an opinion exists with content: "This is my opinion.", user: that user
 When I go to the welcome page
 Then I should see "Test User" and "This is my opinion." within the first "opinion" section
@@ -34,19 +34,18 @@ And an opinion exists with content: "second", user: that user, updated_at: "2011
 And a user exists
 And an opinion exists with content: "first", user: that user, updated_at: "2011-4-27 17:11"
 When I go to the welcome page
-Then I should see "first" within the second "opinion" section
+Then I should see "second" within the first "opinion" section
 
-Scenario: Opinions are limited to 10 
+Scenario: Opinions are limited to 1 
 Given 11 opinions exist
 When I go to the welcome page
-Then I should see a tenth "opinion" section
-But I should see no eleventh "opinion" section
+Then I should see a first "opinion" section
+But I should see no second "opinion" section
 
-Scenario: My own opinion is not listed, but opinions should still be 5
-Given 4 opinions exist
-And I am logged in as member
+Scenario: My own opinion is not listed, but opinions should still be 1
+Given I am logged in as member
 And a opinion exists with user: that user
 And an opinion exist
 When I go to the welcome page
-Then I should see a fifth "opinion" section
-But I should see no sixth "opinion" section
+Then I should see a first "opinion" section
+But I should see no second "opinion" section

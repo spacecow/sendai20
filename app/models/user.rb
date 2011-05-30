@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :email, :password, :password_confirmation, :name, :prefecture, :address
 
-  attr_accessor :password, :prefecture, :address
+  attr_accessor :password
   before_create :set_role
   before_save :prepare_password
   geocoded_by :full_address
@@ -43,6 +43,8 @@ class User < ActiveRecord::Base
 
   private
 
+  def full_address; "#{prefecture}#{address}" end
+
   def prepare_password
     unless password.blank?
       self.password_salt = BCrypt::Engine.generate_salt
@@ -50,6 +52,7 @@ class User < ActiveRecord::Base
     end
   end
 end
+
 
 
 
@@ -67,6 +70,6 @@ end
 #  name          :string(255)
 #  latitude      :float
 #  longitude     :float
-#  address       :string(255)
+#  full_address  :string(255)
 #
 

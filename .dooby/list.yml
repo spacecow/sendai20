@@ -47,3 +47,7 @@ a143d5: !ruby/object:Dooby::Task
   todo: one address field :done
 a43af3: !ruby/object:Dooby::Task 
   todo: prefecture and address cannot be blank
+6fba22: !ruby/object:Dooby::Task 
+  todo: be able to choose language in user profile
+87eaec: !ruby/object:Dooby::Task 
+  todo: cleaning up after removing username and adding prefecture and address :done

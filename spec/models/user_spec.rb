@@ -83,6 +83,7 @@ end
 
 
 
+
 # == Schema Information
 #
 # Table name: users
@@ -97,6 +98,6 @@ end
 #  name          :string(255)
 #  latitude      :float
 #  longitude     :float
-#  address       :string(255)
+#  full_address  :string(255)
 #
 

@@ -21,8 +21,8 @@
       <div id="contents">
         <div id="user_nav">
           <% if current_user %>
-            <%# t('message.welcome',:user=>current_user.username) %>
-            <%# t('message.not_you?') %>
+            <%= t('message.welcome',:user=>current_user.email) %>
+            <%= t('message.not_you?') %>
             <%# link_to t(:log_out), logout_path %>
             <%= render 'operator/logout_header' %>
           <% else %>

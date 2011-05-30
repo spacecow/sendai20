@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @users = User.order('username asc')
+    @users = User.order('email asc')
   end
   
   def new
@@ -11,7 +11,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-    @user.full_address = "#{@user.prefecture}#{@user.address}".strip
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path, :notice => t('notice.thank_you_for_signing_up')
@@ -46,7 +45,7 @@ class UsersController < ApplicationController
   def update_roles
     @user.roles = params[:user][:roles] unless params[:user].nil?
     if @user.save
-      redirect_to users_path, :notice => updated_p(@user.username, :role)
+      redirect_to users_path, :notice => updated_p(@user.email, :role)
     else
       render :action => 'edit_roles'
     end
