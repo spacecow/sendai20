@@ -11,13 +11,20 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to root_path, :notice => t('notice.thank_you_for_signing_up')
+    if @user.valid?
+      if params[:address_checked] == "true"
+        @user.save
+        session[:user_id] = @user.id
+        redirect_to root_path, :notice => t('notice.thank_you_for_signing_up')
+      else
+        @map_url = map_url
+        params[:address_checked] = true
+        load_opinions
+        render :template => 'operator/movie'
+      end
     else
-      @opinions = Opinion.order("updated_at desc")
-      @opinions = @opinions.where("user_id <> ?",current_user.id) if current_user
-      @opinions = @opinions.limit(1)
+      @map_url = map_url
+      load_opinions
       render :template => 'operator/movie'
     end
   end
@@ -50,5 +57,24 @@ class UsersController < ApplicationController
       render :action => 'edit_roles'
     end
   end
+
+  private
+
+    def load_opinions
+      @opinions = Opinion.order("updated_at desc")
+      @opinions = @opinions.where("user_id <> ?",current_user.id) if current_user
+      @opinions = @opinions.limit(1)
+    end
+
+    def map_url
+      "http://maps.google.com/maps/api/staticmap?" +
+      [["size=400x130"],
+       ["maptype=roadmap"],
+       ["sensor=false"],
+       ["center=#{@user.latitude},#{@user.longitude}"],
+       ["zoom=12"],
+       ["style=feature:all|element:all|saturation:-100"],
+       ["markers=color:0xEE127B|#{@user.latitude},#{@user.longitude}"]].join("&")
+    end
 end
 

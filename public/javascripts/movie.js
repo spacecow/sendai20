@@ -6,10 +6,10 @@ $(function() {
     setTimeout(updateComments, 5000);
     setTimeout(changeLogo, 10000);
 
-    var latitude = $("img#map").attr("data-latitude")
-    var longitude = $("img#map").attr("data-longitude")
+    var latitude = $("div#map").attr("data-latitude")
+    var longitude = $("div#map").attr("data-longitude")
     if(latitude != ""){
-      $("img#map").attr("src", mapUrl(latitude,longitude))
+      #alert(mapUrl(latitude,longitude))
     }
   }
 });

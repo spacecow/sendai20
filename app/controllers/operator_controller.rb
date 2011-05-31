@@ -49,6 +49,8 @@ class OperatorController < ApplicationController
     end
 
     @user = User.new
-    #@user.city = request.location.city
+    params[:address_checked] = false
+
+    @map_url = nil 
   end
 end

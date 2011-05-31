@@ -53,3 +53,5 @@ a43af3: !ruby/object:Dooby::Task
   todo: cleaning up after removing username and adding prefecture and address :done
 3cba04: !ruby/object:Dooby::Task 
   todo: save previous opinions :done
+c04648: !ruby/object:Dooby::Task 
+  todo: map integration away from javascript :done
