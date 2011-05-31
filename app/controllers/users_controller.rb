@@ -24,6 +24,7 @@ class UsersController < ApplicationController
       end
     else
       @map_url = map_url
+      params[:address_checked] = true
       load_opinions
       render :template => 'operator/movie'
     end

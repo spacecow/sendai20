@@ -31,6 +31,19 @@ Then I should see an image within the "new_user" form
 And 0 users should exist
 And I should see no notice flash message
 
+Scenario: After seeing the map once, if fields are correct, sign up
+When I go to the root page
+And I fill in "Name" with "Some Name"
+And I fill in "Email" with "some@email.add"
+And I select "宮城県" from "Prefecture"
+And I fill in "Address" with "青葉区"
+And I press "Sign up"
+And I fill in "Password*" with "secret"
+And I fill in "Password confirmation" with "secret"
+When I press "Sign up"
+Then a user should exist with name: "Some Name", email: "some@email.add", address: "青葉区", prefecture: "宮城県" 
+And 1 users should exist
+
 Scenario: Signing up
 When I go to the root page
 And I fill in "Name" with "Some Name"
