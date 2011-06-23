@@ -64,5 +64,7 @@ en:
 
   anonymous: "Anonymous"
   comment: "Comment"
+  locale: "Locale"
   my_opinion: "My Opinion"
   opinion: "Opinion"
+  translation: "Translation"

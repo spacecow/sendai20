@@ -20,6 +20,8 @@ class Ability
         if user.role? :admin
           can [:edit_roles, :update_roles, :destroy], User
           can [:update], Opinion
+          can [:create], Locale
+          can [:index,:create,:delete], Translation
         end
       end
     end

@@ -1,0 +1,41 @@
+<div id="main">
+  <h1><%= pl(:translation) %></h1>
+
+  <table>
+    <% @translations.keys.sort_by{|e| locale(e)}.each do |key| %>
+      <tr>
+        <td><%= key %></td>
+        <td><%= unicode @translations[key] %></td>
+        <td><%= link_to t(:edit), translations_path(:key => key) %></td>
+        <td><%= link_to t(:del), delete_translations_path(:key => key), :confirm => sure?, :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <h1><%= add(:translation) %></h1>
+
+  <%= semantic_form_for @translation do |f| %>
+    <%= f.input :locale, :as => :select, :collection => @locales %>
+    <%= f.input :key %>
+    <%= f.input :value %>
+    <%= f.submit either_of(@translation.key.blank?,create(:translation),update(:translation)), :class => :submit %>
+  <% end %>
+  <div class="clear"></div>
+
+  <h1><%= add(:locale) %></h1>
+
+  <%= semantic_form_for @locale do |f| %>
+    <%= f.input :title %>
+    <%= f.submit either_of(@locale.new_record?,create(:locale),update(:locale)), :class => :submit %>
+  <% end %>
+  <div class="clear"></div>
+
+  <div class="flash_plus_button">
+    <div id="flash_container" class="admin_width_with_margin">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 module ApplicationHelper
+  def add(s); t2(:add,s) end
   def chain(s1,s2); "#{s1.to_s}.#{s2.to_s}" end
   def create(s); t2(:create,s) end
   def current_language; english? ? t(:japanese) : t(:english) end
   def edit(s); t2(:edit,s) end
   def edit_p(s); tp2(:edit,s) end
+  def either_of(b,s1,s2); b ? s1 : s2 end
   def lbl(s); chain(:label,s) end
+  def locale(key); key.split('.')[0..-2].join('.') end
   def new(s); t2(:new,s) end
   def pl(s); t(s).match(/\w/) ? t(s).pluralize : t(s) end
   def save(s); t2(:save,s) end

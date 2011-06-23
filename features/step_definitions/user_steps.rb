@@ -14,3 +14,8 @@ Given /^I am logged in as member$/ do
   And %(I am logged in as that user)
 end
 
+Given /^I am logged in as admin$/ do
+  Given %(a user exists with roles_mask: 2)
+  And %(I am logged in as that user)
+end
+

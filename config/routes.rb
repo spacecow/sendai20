@@ -1,4 +1,11 @@
 Sendai20::Application.routes.draw do
+  resources :locales, :only => [:create,:update]
+  resources :translations, :only => [:index,:create] do
+    collection do
+      delete 'delete'
+    end
+  end
+
   get "operator/welcome"
   get "operator/scrollup"
   get "operator/movie"

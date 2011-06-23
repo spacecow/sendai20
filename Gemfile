@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
-gem 'mysql2'
+gem 'mysql2', '0.2.7'
 gem 'formtastic' #rails g formtastic:install
 gem 'compass' #compass init rails /path/to/myrailsproject --using blueprint/semantic
 gem 'cancan' #rails g cancan:ability
@@ -9,24 +9,25 @@ gem "bcrypt-ruby", :require => "bcrypt"
 gem "mocha", :group => :test
 gem "annotate"
 gem "forgery"
-gem "json", "1.4.6"
 gem "geocoder"
+gem "redis"
+gem "escape_utils"
 
 group :development do
   gem "jquery-rails"
-#  gem 'nifty-generators', :git => "https://github.com/spacecow/nifty-generators.git"
+  gem 'nifty-generators', :git => "https://github.com/spacecow/nifty-generators.git"
   gem "rspec-rails" #rails g rspec:install
 end
 
 group :test do
   gem 'spork'
-  gem 'cucumber', '0.10.0'
+  gem 'cucumber'
   gem 'cucumber-rails' #rails g cucumber:install --capybara --rspec
   gem 'capybara'
   gem 'database_cleaner'
   gem 'pickle' #rails g pickle --paths --email
   gem 'launchy'
   gem 'factory_girl'
-  gem 'rspec-expectations', '2.5.0'
-  gem 'gherkin', '2.3.6'
+  gem 'rspec-expectations'
+  gem 'gherkin'
 end
