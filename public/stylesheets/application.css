@@ -221,70 +221,83 @@ div#container div#contents div#signin form img {
 }
 /* line 159, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav {
-  background: #333333;
+  background: black url("/images/pano.png");
   padding: 10px;
+  -webkit-animation: move-city-top 60s 5s infinite linear;
 }
-/* line 162, ../../app/stylesheets/application.sass */
+/* line 163, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav img {
   float: left;
 }
-/* line 164, ../../app/stylesheets/application.sass */
+/* line 165, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav form {
   margin-top: 20px;
   color: white;
   float: right;
 }
-/* line 168, ../../app/stylesheets/application.sass */
+/* line 169, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav form div {
   float: left;
   margin-right: 5px;
 }
-/* line 171, ../../app/stylesheets/application.sass */
+/* line 172, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav form input.submit {
   margin-top: 5px;
 }
-/* line 174, ../../app/stylesheets/application.sass */
+/* line 175, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic h1 {
   border-bottom: 1px dotted black;
   margin-bottom: 10px;
   margin-top: 10px;
 }
-/* line 178, ../../app/stylesheets/application.sass */
+/* line 179, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic h1.first {
   margin-top: 0;
 }
-/* line 180, ../../app/stylesheets/application.sass */
+/* line 181, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li.error {
   background: gray;
 }
-/* line 183, ../../app/stylesheets/application.sass */
+/* line 184, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li.error p.inline-errors {
   margin-left: 160px;
   color: white;
   text-shadow: 1px 1px 1px black;
 }
-/* line 187, ../../app/stylesheets/application.sass */
+/* line 188, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li {
   list-style-type: none;
 }
-/* line 189, ../../app/stylesheets/application.sass */
+/* line 190, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li label {
   float: left;
   width: 150px;
   text-align: right;
   margin: 2px 10px 0 0;
 }
-/* line 194, ../../app/stylesheets/application.sass */
+/* line 195, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic li textarea {
   width: 300px;
   height: 100px;
   border: 0;
 }
-/* line 198, ../../app/stylesheets/application.sass */
+/* line 199, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic input.submit {
   margin: 10px 0 0 160px;
 }
-/* line 200, ../../app/stylesheets/application.sass */
+/* line 201, ../../app/stylesheets/application.sass */
 div#container div#contents form.formtastic input.small_submit {
   margin-top: 10px;
+}
+
+@-webkit-keyframes move-city-top {
+  /* line 205, ../../app/stylesheets/application.sass */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 207, ../../app/stylesheets/application.sass */
+  to {
+    background-position: -1600px 0;
+  }
 }

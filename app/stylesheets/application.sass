@@ -157,8 +157,9 @@ div#container
         img
           margin-top: 10px
     div#user_nav
-      background: #333
+      background: black url("/images/pano.png")
       padding: 10px
+      -webkit-animation: move-city-top 60s 5s infinite linear
       img
         float: left
       form
@@ -199,3 +200,9 @@ div#container
         margin: $spacing 0 0 $label_full_width
       input.small_submit
         margin-top: $spacing
+
+@-webkit-keyframes move-city-top
+  from
+    background-position: 0 0 
+  to
+    background-position: -1600px 0
