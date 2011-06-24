@@ -57,3 +57,7 @@ c04648: !ruby/object:Dooby::Task
   todo: map integration away from javascript :done
 756fd6: !ruby/object:Dooby::Task 
   todo: updating cucumber :done
+a97ea5: !ruby/object:Dooby::Task 
+  todo: login screen cooler
+ac5f5d: !ruby/object:Dooby::Task 
+  todo: header layout :done

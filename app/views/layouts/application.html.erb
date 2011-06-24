@@ -7,7 +7,7 @@
     <!--[if lt IE 8]>
       <%= stylesheet_link_tag 'ie.css', :media => 'screen, projection' %>
     <![endif]-->
-    <%= stylesheet_link_tag "application", "formtastic" %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "jquery", "rails", "application" %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
@@ -21,8 +21,10 @@
       <div id="contents">
         <div id="user_nav">
           <% if current_user %>
-            <%= t('message.welcome',:user=>current_user.email) %>
-            <%= t('message.not_you?') %>
+            <div id="welcome">
+              <%= t('message.welcome',:user=>current_user.email) %>
+              <%= t('message.not_you?') %>
+            </div>
             <%# link_to t(:log_out), logout_path %>
             <%= render 'operator/logout_header' %>
           <% else %>

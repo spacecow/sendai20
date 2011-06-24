@@ -1,14 +1,14 @@
 <%# image_tag 'Sendai.png', :id => "header" %>
 
-<%= form_tag sessions_path do %>
-  <div id="email">
-    <%= label_tag :login, t(:login) %><br />
+<%= form_tag sessions_path, :class => :inline do %>
+  <li id="email" class="block">
+    <%= label_tag :login, t(:login) %>
     <%= text_field_tag :login %>
-  </div>
-  <div id="password">
-    <%= label_tag :password, ft(:password) %><br />
+  </li>
+  <li id="password" class="block">
+    <%= label_tag :password, ft(:password) %>
     <%= password_field_tag :password %>
-  </div><br />
+  </li>
   <div class="clear"></div>
   <%= submit_tag t(:login), :class => :submit %>
 <% end %>
