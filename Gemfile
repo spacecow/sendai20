@@ -15,7 +15,7 @@ gem "escape_utils"
 
 group :development do
   gem "jquery-rails"
-  gem 'nifty-generators', :git => "https://github.com/spacecow/nifty-generators.git"
+  gem 'nifty-generators', :path => "/home/johan/ruby/rails/nifty-generators" #:git => "https://github.com/spacecow/nifty-generators.git"
   gem "rspec-rails" #rails g rspec:install
 end
 
