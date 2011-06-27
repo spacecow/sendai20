@@ -4,13 +4,9 @@ $(function() {
   if($("div#opinions").length > 0) {
     setTimeout(deleteWelcome, 4999);
     setTimeout(updateComments, 5000);
-    setTimeout(changeLogo, 10000);
 
     var latitude = $("div#map").attr("data-latitude")
     var longitude = $("div#map").attr("data-longitude")
-    if(latitude != ""){
-      #alert(mapUrl(latitude,longitude))
-    }
   }
 });
 
@@ -26,13 +22,11 @@ function updateComments() {
   setTimeout(movieSlide, 40000);
 }
 function movieSlide(){
-  setTimeout(updateComments, 1000);
-}
-function changeLogo(){
-  var file = $("img#header").attr("alt")+"i";
-  $("img#header").attr("src","/images/" + file + ".png")
-  $("img#header").attr("alt",file)
-  setTimeout(changeLogo,10000)
+  if($("div#opinions").children("div.movie").length == 1){
+    updateComments();
+  } else {
+    setTimeout(movieSlide, 1000);
+  }
 }
 
 function mapUrl(latitude,longitude) {
