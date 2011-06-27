@@ -1,11 +1,5 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-def controller_actions(controller)
-  Rails.application.routes.routes.inject({}) do |hash, route|
-    hash[route.requirements[:action]] = route.verb.downcase if route.requirements[:controller] == controller && !route.verb.nil?
-    hash
-  end
-end
 
 describe UsersController do
   users_controller_actions = controller_actions("users")

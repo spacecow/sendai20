@@ -26,3 +26,10 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 end
+
+def controller_actions(controller)
+  Rails.application.routes.routes.inject({}) do |hash, route|
+    hash[route.requirements[:action]] = route.verb.downcase if route.requirements[:controller] == controller && !route.verb.nil?
+    hash
+  end
+end

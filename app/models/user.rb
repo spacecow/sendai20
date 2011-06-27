@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :email, :password, :password_confirmation, :name, :prefecture, :address
 
-  attr_accessor :password
+  attr_accessor :password, :old_password
   before_create :set_role
   before_save :prepare_password
   geocoded_by :full_address

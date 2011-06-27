@@ -26,7 +26,7 @@ Sendai20::Application.routes.draw do
     member do
       get 'edit_roles'
       put 'update_roles'
-      post 'reset_password'
+      get 'reset_password'
     end
   end
 
