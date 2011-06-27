@@ -69,3 +69,5 @@ abac76: !ruby/object:Dooby::Task
   todo: testing creations of resets :done
 2b541f: !ruby/object:Dooby::Task 
   todo: mail resets :done
+6ce151: !ruby/object:Dooby::Task 
+  todo: reset password routing :done

@@ -43,7 +43,7 @@ describe UsersController do
           send("#{req}", "#{action}", :id => @other.id)
           response.redirect_url.should_not eq(welcome_url)
         end
-      elsif %w(edit update).include?(action)
+      elsif %w(reset_password edit update).include?(action)
         it "should reach his own #{action} page" do
           send("#{req}", "#{action}", :id => @own.id)
           response.redirect_url.should_not eq(welcome_url)
