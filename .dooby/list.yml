@@ -65,3 +65,5 @@ d3fab0: !ruby/object:Dooby::Task
   todo: edit profile
 80bdac: !ruby/object:Dooby::Task 
   todo: " :done"
+abac76: !ruby/object:Dooby::Task 
+  todo: testing creations of resets :done

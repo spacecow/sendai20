@@ -10,11 +10,12 @@ class ApplicationController < ActionController::Base
   end
   protect_from_forgery
   before_filter :set_language
-  helper_method :current_user, :english?, :ft, :unicode
+  helper_method :current_user, :english?, :ft, :unicode, :message, :chain
 
   def added(s); success(:added,s) end
   def alert(act); t("alert.#{act}") end
   def alert2(act,obj); t("alert.#{act}",:obj=>obj) end
+  def chain(s1,s2); "#{s1.to_s}.#{s2.to_s}" end
   def created(s); success(:created,s) end
   def deleted(s); success(:deleted,s) end
   def d(s); t(s).downcase end
@@ -22,6 +23,7 @@ class ApplicationController < ActionController::Base
   def english?; I18n.locale == :en end
   def ft(s); t("formtastic.labels.#{s.to_s}") end
   def ftd(s); d("formtastic.labels.#{s.to_s}") end  
+  def message(s); t(chain(:message,s)) end
   def notify(act); t("notice.#{act}") end
   def pl(s); t(s).match(/\w/) ? t(s).pluralize : t(s) end  
   def saved(s); success(:saved,s) end

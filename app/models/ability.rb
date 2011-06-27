@@ -3,6 +3,7 @@ class Ability
 
   def initialize(user)
     can :create, User
+    can :create, Reset
     
     if user
       if user.role? :god

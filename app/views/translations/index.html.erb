@@ -29,13 +29,4 @@
     <%= f.submit either_of(@locale.new_record?,create(:locale),update(:locale)), :class => :submit %>
   <% end %>
   <div class="clear"></div>
-
-  <div class="flash_plus_button">
-    <div id="flash_container" class="admin_width_with_margin">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-    </div>
-  </div>
-  <div class="clear"></div>
 </div>

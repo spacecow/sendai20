@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 module ApplicationHelper
   def add(s); t2(:add,s) end
-  def chain(s1,s2); "#{s1.to_s}.#{s2.to_s}" end
   def create(s); t2(:create,s) end
   def current_language; english? ? t(:japanese) : t(:english) end
   def edit(s); t2(:edit,s) end
@@ -11,6 +10,7 @@ module ApplicationHelper
   def locale(key); key.split('.')[0..-2].join('.') end
   def new(s); t2(:new,s) end
   def pl(s); t(s).match(/\w/) ? t(s).pluralize : t(s) end
+  def reset(s); t2(:reset,s) end
   def save(s); t2(:save,s) end
   def submit(s); t2(:submit,s) end
   def sure?; t('message.sure?') end

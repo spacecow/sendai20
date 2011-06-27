@@ -12,6 +12,7 @@ en:
   member: "Member"
   mini_admin: "mini-admin"
   or: " or "
+  password: "Password"
   possessive: "%{owner}'s %{obj}"
   profile: "Profile"
   show: "Show"
@@ -25,6 +26,7 @@ en:
     list: "List %{obj}"
     new: "New %{obj}"
     remove: "Remove %{obj}"
+    reset: "Reset %{obj}"
     save: "Save %{obj}"
     send: "Send %{obj}"
     show: "Show %{obj}"
@@ -43,8 +45,10 @@ en:
     thank_you_for_sending: "Thank you. Your comment has been sent to the editor."
     thank_you_for_signing_up: "Thank you for signing up! You are now logged in."
   message:
+    forgot_password?: "Forgot Password?"
     not_you?: "Not you?"
     or: "%{obj1} or %{obj2}"
+    reset_instructions: "Instructions of how to reset your password has been sent to your email."
     sure?: "Are you sure?"
     welcome: "Welcome %{user}."
   success:

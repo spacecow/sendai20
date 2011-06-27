@@ -1,4 +1,6 @@
 Sendai20::Application.routes.draw do
+  resources :resets, :only => [:new,:create]
+
   resources :locales, :only => [:create,:update]
   resources :translations, :only => [:index,:create] do
     collection do

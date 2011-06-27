@@ -1,4 +1,4 @@
 <%= semantic_form_for @opinion do |f| %>
-  <%= f.input :content, :label => t(:my_opinion), :wrapper_html => {:class => :big} %>
+  <%= f.input :content, :label => ft(:my_opinion), :wrapper_html => {:class => :big} %>
   <%= f.submit (current_user && current_user.opinions.any?) ? update(:opinion) : save(:opinion), :class => :submit %>
 <% end %>

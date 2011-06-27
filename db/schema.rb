@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110610060750) do
+ActiveRecord::Schema.define(:version => 20110627045914) do
 
   create_table "locales", :force => true do |t|
     t.string   "title"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(:version => 20110610060750) do
 
   create_table "opinions", :force => true do |t|
     t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "resets", :force => true do |t|
+    t.string   "code"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
