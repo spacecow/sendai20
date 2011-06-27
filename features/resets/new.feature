@@ -18,11 +18,13 @@ And I press "Reset Password"
 Then I should see a reset email error "not a registered email"
 
 Scenario: Create a reset
-Given a user exists with email: "exists@from.now"
+Given a user exists with email: "jsveholm@gmail.com"
 When I go to the new reset page
-And I fill in "Email" with "exists@from.now"
+And I fill in "Email" with "jsveholm@gmail.com"
 And I press "Reset Password"
 Then a reset should exist with user: that user
 And 1 resets should exist
 And I should be on the root page
 And I should see "Instructions of how to reset your password has been sent to your email." as notice flash message
+And 1 email should be delivered to jsveholm@gmail.com
+Then show me the emails

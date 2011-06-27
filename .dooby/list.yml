@@ -67,3 +67,5 @@ d3fab0: !ruby/object:Dooby::Task
   todo: " :done"
 abac76: !ruby/object:Dooby::Task 
   todo: testing creations of resets :done
+2b541f: !ruby/object:Dooby::Task 
+  todo: mail resets :done

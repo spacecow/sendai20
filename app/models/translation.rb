@@ -12,3 +12,16 @@ class Translation < ActiveRecord::Base
     self
   end
 end
+
+# == Schema Information
+#
+# Table name: translations
+#
+#  id         :integer(4)      not null, primary key
+#  locale_id  :integer(4)
+#  key        :string(255)
+#  value      :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+

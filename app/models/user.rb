@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 class User < ActiveRecord::Base
   has_many :opinions
+  has_many :resets
 
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :email, :password, :password_confirmation, :name, :prefecture, :address
@@ -56,6 +57,7 @@ end
 
 
 
+
 # == Schema Information
 #
 # Table name: users
@@ -70,6 +72,7 @@ end
 #  name          :string(255)
 #  latitude      :float
 #  longitude     :float
-#  full_address  :string(255)
+#  prefecture    :string(255)
+#  address       :string(255)
 #
 

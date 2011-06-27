@@ -1,4 +1,6 @@
 class Reset < ActiveRecord::Base
+  belongs_to :user
+
   attr_accessor :email
   attr_accessible :email
 
@@ -14,3 +16,15 @@ class Reset < ActiveRecord::Base
     end
     def save_user; self.user_id = User.find_by_email(email).id end
 end
+
+# == Schema Information
+#
+# Table name: resets
+#
+#  id         :integer(4)      not null, primary key
+#  code       :string(255)
+#  user_id    :integer(4)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
