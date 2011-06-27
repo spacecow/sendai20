@@ -20,19 +20,20 @@
       <% end %>
       <div id="contents">
         <div id="user_nav">
+          <% if english? %>
+            <%= link_to "日本語", :language => 'ja', :address => @input %>
+          <% else %>
+            <%= link_to "English", :language => 'en', :address => @input %>
+          <% end %>
           <% if current_user %>
             <div id="welcome">
               <%= t('message.welcome',:user=>current_user.email) %>
               <%= t('message.not_you?') %>
             </div>
-            <%# link_to t(:log_out), logout_path %>
             <%= render 'operator/logout_header' %>
           <% else %>
             <%= render 'operator/login_header' %>
           <% end %>
-          <%# link_to "scroll up", scrollup_path %>
-          <%# link_to "scroll down", root_path %>
-          <%# link_to "movie", movie_path %>
           <div class="clear"></div>
         </div>
         <%= content_tag :h1, yield(:title) if show_title? %>
