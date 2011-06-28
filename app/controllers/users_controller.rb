@@ -60,6 +60,12 @@ class UsersController < ApplicationController
   end
 
   def reset_password
+    unless current_user && current_user == @user
+      @reset = Reset.find_by_code(params[:code])
+      unless @reset and @reset.user == @user
+        redirect_to welcome_url, :alert => "You are not authorized to access this page."
+      end 
+    end
   end
 
   private

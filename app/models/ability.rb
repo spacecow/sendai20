@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :create, User
+    can [:create,:reset_password], User
     can :create, Reset
     
     if user
@@ -14,7 +14,7 @@ class Ability
           can :show, User
           can :create, Opinion
           can :update, Opinion, :user_id => user.id
-          can :reset_password, User, :id => user.id
+#          can :reset_password, User, :id => user.id
         end
         if user.role?(:mini_admin) || user.role?(:admin)
           can [:index,:update], User

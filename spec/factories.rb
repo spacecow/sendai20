@@ -9,6 +9,9 @@ Factory.define :opinion do |f|
   f.content "Default factory content"
 end
 
+Factory.define :reset do |f|
+end
+
 Factory.define :translation do |f|
   f.association :locale
   f.key "welcome"
