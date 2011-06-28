@@ -13,12 +13,12 @@ describe UsersController do
       if %w(new create).include?(action)
         it "should reach the #{action} page" do
           send("#{req}", "#{action}", :id => @user.id)
-          response.redirect_url.should_not eq(login_url)
+          response.redirect_url.should_not eq(welcome_url)
         end
       else
         it "should not reach the #{action} page" do
           send("#{req}", "#{action}", :id => @user.id)
-          response.redirect_url.should eq(login_url)
+          response.redirect_url.should eq(welcome_url)
         end
       end
     end
@@ -37,7 +37,7 @@ describe UsersController do
           send("#{req}", "#{action}", :id => @other.id)
           response.redirect_url.should_not eq(welcome_url)
         end
-      elsif %w(reset_password edit update).include?(action)
+      elsif %w(reset_password update_password edit update).include?(action)
         it "should reach his own #{action} page" do
           send("#{req}", "#{action}", :id => @own.id)
           response.redirect_url.should_not eq(welcome_url)

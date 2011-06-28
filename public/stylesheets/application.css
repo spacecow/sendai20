@@ -1,24 +1,44 @@
-/* line 43, ../../app/stylesheets/application.sass */
+/* line 44, ../../app/stylesheets/application.sass */
 div.clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 48, ../../app/stylesheets/application.sass */
+/* line 49, ../../app/stylesheets/application.sass */
 a {
   color: #4b7399;
   text-decoration: none;
   font-size: 12px;
 }
 
-/* line 53, ../../app/stylesheets/application.sass */
+/* line 54, ../../app/stylesheets/application.sass */
+.bright {
+  color: white;
+}
+
+/* line 57, ../../app/stylesheets/application.sass */
+form.bright a {
+  color: white;
+}
+
+/* line 59, ../../app/stylesheets/application.sass */
+.shadow {
+  text-shadow: 1px 1px 1px black;
+}
+
+/* line 61, ../../app/stylesheets/application.sass */
+.right {
+  float: right;
+}
+
+/* line 64, ../../app/stylesheets/application.sass */
 h1 {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-/* line 57, ../../app/stylesheets/application.sass */
+/* line 68, ../../app/stylesheets/application.sass */
 div#flash_notice {
   float: left;
   margin-bottom: 5px;
@@ -41,7 +61,7 @@ div#flash_notice {
   background-image: linear-gradient(top, #4cc417, #339966);
 }
 
-/* line 63, ../../app/stylesheets/application.sass */
+/* line 74, ../../app/stylesheets/application.sass */
 div#flash_alert {
   float: left;
   margin-bottom: 5px;
@@ -64,46 +84,51 @@ div#flash_alert {
   background-image: linear-gradient(top, #ff3333, #993333);
 }
 
-/* line 71, ../../app/stylesheets/application.sass */
+/* line 83, ../../app/stylesheets/application.sass */
 form.inline li {
   float: left;
   margin-right: 5px;
 }
 
-/* line 75, ../../app/stylesheets/application.sass */
+/* line 87, ../../app/stylesheets/application.sass */
 form li {
   list-style-type: none;
 }
-/* line 77, ../../app/stylesheets/application.sass */
+/* line 89, ../../app/stylesheets/application.sass */
 form li textarea {
   width: 300px;
   height: 100px;
   resize: none;
 }
-/* line 81, ../../app/stylesheets/application.sass */
+/* line 93, ../../app/stylesheets/application.sass */
 form input.submit {
   margin-top: 5px;
 }
-/* line 84, ../../app/stylesheets/application.sass */
+/* line 96, ../../app/stylesheets/application.sass */
 form li.block label {
   display: block;
 }
-/* line 86, ../../app/stylesheets/application.sass */
+/* line 98, ../../app/stylesheets/application.sass */
 form li.block input {
   display: block;
 }
-/* line 89, ../../app/stylesheets/application.sass */
+/* line 101, ../../app/stylesheets/application.sass */
 form li.big textarea {
   height: 400px;
 }
 
-/* line 96, ../../app/stylesheets/application.sass */
+/* line 104, ../../app/stylesheets/application.sass */
+form#login a {
+  margin: 10px 5px 0 0;
+}
+
+/* line 111, ../../app/stylesheets/application.sass */
 div#container {
   font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif;
   width: 900px;
   margin: 40px auto;
 }
-/* line 100, ../../app/stylesheets/application.sass */
+/* line 115, ../../app/stylesheets/application.sass */
 div#container div#contents {
   padding: 20px 20px;
   border: 1px solid black;
@@ -120,7 +145,7 @@ div#container div#contents {
   background-image: -ms-linear-gradient(left, #ffffff, #dddddd 33%, #ffffff);
   background-image: linear-gradient(left, #ffffff, #dddddd 33%, #ffffff);
 }
-/* line 106, ../../app/stylesheets/application.sass */
+/* line 121, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container {
   margin-top: 5px;
   float: left;
@@ -133,7 +158,7 @@ div#container div#contents div#frame_container {
   -khtml-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 112, ../../app/stylesheets/application.sass */
+/* line 127, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame {
   position: relative;
   overflow: hidden;
@@ -141,46 +166,46 @@ div#container div#contents div#frame_container div#frame {
   width: 300px;
   margin: 20px;
 }
-/* line 118, ../../app/stylesheets/application.sass */
+/* line 133, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions {
   position: absolute;
   top: -5px;
 }
-/* line 121, ../../app/stylesheets/application.sass */
+/* line 136, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion {
   border-top: 1px solid gray;
   padding: 5px 0;
   list-style-type: none;
 }
-/* line 125, ../../app/stylesheets/application.sass */
+/* line 140, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion span#username {
   font-weight: bold;
   font-size: 14px;
 }
-/* line 128, ../../app/stylesheets/application.sass */
+/* line 143, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion span#username a {
   font-size: 14px;
 }
-/* line 130, ../../app/stylesheets/application.sass */
+/* line 145, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion span#name {
   font-size: 12px;
   color: gray;
 }
-/* line 133, ../../app/stylesheets/application.sass */
+/* line 148, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion span#ago {
   font-size: 12px;
   color: gray;
 }
-/* line 136, ../../app/stylesheets/application.sass */
+/* line 151, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion:hover {
   background: #eeeeee;
 }
-/* line 138, ../../app/stylesheets/application.sass */
+/* line 153, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.movie {
   margin-bottom: 450px;
   border-top: none;
 }
-/* line 142, ../../app/stylesheets/application.sass */
+/* line 157, ../../app/stylesheets/application.sass */
 div#container div#contents div#profile_container {
   border: 1px solid black;
   -moz-border-radius: 10px;
@@ -191,45 +216,45 @@ div#container div#contents div#profile_container {
   border-radius: 10px;
   padding: 20px 20px;
 }
-/* line 147, ../../app/stylesheets/application.sass */
+/* line 162, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions {
   width: 300px;
   float: left;
 }
-/* line 150, ../../app/stylesheets/application.sass */
+/* line 165, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion {
   border-bottom: 1px solid gray;
   padding: 5px 0;
   list-style-type: none;
 }
-/* line 154, ../../app/stylesheets/application.sass */
+/* line 169, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#username {
   font-weight: bold;
   font-size: 14px;
 }
-/* line 157, ../../app/stylesheets/application.sass */
+/* line 172, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#username a {
   font-size: 14px;
 }
-/* line 159, ../../app/stylesheets/application.sass */
+/* line 174, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#name {
   font-size: 12px;
   color: gray;
 }
-/* line 162, ../../app/stylesheets/application.sass */
+/* line 177, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#ago {
   font-size: 12px;
   color: gray;
 }
-/* line 165, ../../app/stylesheets/application.sass */
+/* line 180, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li:hover {
   background: #eeeeee;
 }
-/* line 167, ../../app/stylesheets/application.sass */
+/* line 182, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li:last-child {
   border-bottom: none;
 }
-/* line 169, ../../app/stylesheets/application.sass */
+/* line 184, ../../app/stylesheets/application.sass */
 div#container div#contents div#my_opinion_container {
   margin-top: 5px;
   border: 1px solid black;
@@ -242,90 +267,90 @@ div#container div#contents div#my_opinion_container {
   padding: 20px 20px;
   float: right;
 }
-/* line 173, ../../app/stylesheets/application.sass */
+/* line 188, ../../app/stylesheets/application.sass */
 div#container div#contents div#my_opinion_container div#my_opinion {
   margin: 0;
   padding: 0;
   width: 300px;
 }
-/* line 177, ../../app/stylesheets/application.sass */
-div#container div#contents div#signin {
+/* line 192, ../../app/stylesheets/application.sass */
+div#container div#contents div#form {
+  width: 350px;
   float: right;
   margin: 20px 20px 0 0;
 }
-/* line 181, ../../app/stylesheets/application.sass */
-div#container div#contents div#signin form img {
+/* line 197, ../../app/stylesheets/application.sass */
+div#container div#contents div#form form img {
   margin-top: 10px;
 }
-/* line 183, ../../app/stylesheets/application.sass */
+/* line 199, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav {
   height: 100px;
   background: black url("/images/pano2.png");
   padding: 10px;
   -webkit-animation: move-city-top 60s 5s infinite linear;
 }
-/* line 188, ../../app/stylesheets/application.sass */
+/* line 204, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav div#welcome {
   display: block;
   text-align: right;
 }
-/* line 191, ../../app/stylesheets/application.sass */
+/* line 207, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav img {
   float: left;
 }
-/* line 193, ../../app/stylesheets/application.sass */
+/* line 209, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav form {
   margin-top: 20px;
-  color: white;
   float: right;
 }
-/* line 198, ../../app/stylesheets/application.sass */
+/* line 213, ../../app/stylesheets/application.sass */
 div#container div#contents form.list h1 {
   border-bottom: 1px dotted black;
   margin-bottom: 10px;
   margin-top: 10px;
 }
-/* line 202, ../../app/stylesheets/application.sass */
+/* line 217, ../../app/stylesheets/application.sass */
 div#container div#contents form.list h1.first {
   margin-top: 0;
 }
-/* line 204, ../../app/stylesheets/application.sass */
+/* line 219, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li.error {
   background: gray;
 }
-/* line 207, ../../app/stylesheets/application.sass */
+/* line 222, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li.error p.inline-errors {
   margin-left: 160px;
   color: white;
   text-shadow: 1px 1px 1px black;
 }
-/* line 211, ../../app/stylesheets/application.sass */
+/* line 226, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li {
   list-style-type: none;
 }
-/* line 213, ../../app/stylesheets/application.sass */
+/* line 228, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li label {
   float: left;
   width: 150px;
   text-align: right;
   margin: 2px 10px 0 0;
 }
-/* line 218, ../../app/stylesheets/application.sass */
+/* line 233, ../../app/stylesheets/application.sass */
 div#container div#contents form.list input.submit {
   margin: 5px 0 0 160px;
 }
-/* line 220, ../../app/stylesheets/application.sass */
+/* line 235, ../../app/stylesheets/application.sass */
 div#container div#contents form.list input.small_submit {
   margin-top: 10px;
 }
 
 @-webkit-keyframes move-city-top {
-  /* line 224, ../../app/stylesheets/application.sass */
+  /* line 239, ../../app/stylesheets/application.sass */
   from {
     background-position: 0 0;
   }
 
-  /* line 226, ../../app/stylesheets/application.sass */
+  /* line 241, ../../app/stylesheets/application.sass */
   to {
     background-position: -1600px 0;
   }

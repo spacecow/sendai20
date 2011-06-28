@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 module ApplicationHelper
   def add(s); t2(:add,s) end
+  def change(s); t2(:change,s) end
   def create(s); t2(:create,s) end
   def current_language; english? ? t(:japanese) : t(:english) end
   def edit(s); t2(:edit,s) end

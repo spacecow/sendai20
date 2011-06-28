@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       if params[:address_checked] == "true"
         @user.save
         session[:user_id] = @user.id
-        redirect_to root_path, :notice => t('notice.thank_you_for_signing_up')
+        redirect_to root_path, :notice => join(notify(:thank_you_for_signing_up),notify(:logged_in))
       else
         @map_url = map_url
         params[:address_checked] = true
@@ -35,9 +35,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to movie_path, :notice => updated(:profile)
+      redirect_to root_path, :notice => updated(:profile)
     else
       render :action => 'edit'
     end
@@ -60,9 +59,30 @@ class UsersController < ApplicationController
   end
 
   def reset_password
-    unless current_user && current_user == @user
+    unless current_user && (current_user == @user or admin? or god?)
       @reset = Reset.find_by_code(params[:code])
       unless @reset and @reset.user == @user
+        redirect_to welcome_url, :alert => "You are not authorized to access this page."
+      end 
+    end
+  end
+
+  def update_password
+    if current_user && (current_user == @user or admin? or god?)
+      if @user.update_attributes(params[:user])
+      else
+        render 'reset_password'
+      end
+    else
+      @reset = Reset.find_by_code(params[:code])
+      if @reset and @reset.user == @user
+        if @user.update_attributes(params[:user])
+          session[:user_id] = @user.id
+          redirect_to root_url, :notice => join(changed(:password),notify(:logged_in))
+        else
+          render 'reset_password'
+        end
+      else
         redirect_to welcome_url, :alert => "You are not authorized to access this page."
       end 
     end

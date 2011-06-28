@@ -18,7 +18,7 @@ describe OpinionsController do
     opinions_controller_actions.each do |action,req|
       it "should not reach the #{action} page" do
         send("#{req}", "#{action}", :id => @opinion.id)
-        response.redirect_url.should eq(login_url)
+        response.redirect_url.should eq(welcome_url)
       end
     end
   end

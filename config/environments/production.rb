@@ -46,4 +46,11 @@ Sendai20::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  config.action_mailer.default_url_options = { :host => "sao.fir-vpc.riec.tohoku.ac.jp/sendai20" }
 end
+
+ActionMailer::Base.smtp_settings = {
+  :address => "smtp.riec.tohoku.ac.jp",
+  :port    => 25
+}

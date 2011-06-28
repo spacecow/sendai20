@@ -2,20 +2,6 @@ Feature:
 Background:
 Given a user: "first" exists with email: "example@mail.com"
 
-Scenario: Reset Password View Page for member
-Given I am logged in as that user
-When I go to that user's reset_password page
-Then the "Old Password" field should be empty
-And the "New Password" field should be empty
-And the "New Password Confirmation" field should be empty
-
-Scenario: Reset Password View Page for user with key
-Given a reset exists with email: "example@mail.com"
-When I go to that user's reset_password page with that reset
-Then I should see no "Old Password" field 
-And the "New Password" field should be empty
-And the "New Password Confirmation" field should be empty
-
 Scenario: A member cannot reset another member's password
 Given I am logged in as user: "first"
 And a user: "second" exists

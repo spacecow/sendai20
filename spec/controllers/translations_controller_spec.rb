@@ -13,12 +13,12 @@ describe TranslationsController do
       if %w().include?(action)
         it "should reach the #{action} page" do
           send("#{req}", "#{action}", :id => @translation.id)
-          response.redirect_url.should_not eq(login_url)
+          response.redirect_url.should_not eq(welcome_url)
         end
       else
         it "should not reach the #{action} page" do
           send("#{req}", "#{action}", :id => @translation.id)
-          response.redirect_url.should eq(login_url)
+          response.redirect_url.should eq(welcome_url)
         end
       end
     end
