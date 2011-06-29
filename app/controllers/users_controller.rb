@@ -58,7 +58,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def reset_password
+  def change_password
     unless current_user && (current_user == @user or admin? or god?)
       @reset = Reset.find_by_code(params[:code])
       if @reset and @reset.user == @user and @reset.no_status? :used
@@ -76,7 +76,7 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         redirect_to root_url, :notice => join(changed(:password),notify(:logged_in))
       else
-        render 'reset_password'
+        render 'change_password'
       end
     else
       @reset = Reset.find_by_code(params[:code])
@@ -87,7 +87,7 @@ class UsersController < ApplicationController
           session[:user_id] = @user.id
           redirect_to root_url, :notice => join(changed(:password),notify(:logged_in))
         else
-          render 'reset_password'
+          render 'change_password'
         end
       elsif @reset and @reset.status? :used
         redirect_to welcome_url, :alert => "The key you are trying to use has already been used."

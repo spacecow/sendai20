@@ -2,7 +2,7 @@ Feature:
 Background:
 Given a user exists with password: "abc123"
 And I am logged in as that user
-When I go to that user's reset_password page
+When I go to that user's change_password page
 
 Scenario: The old password must be filled in
 When I fill in "Old Password" with "wrong"

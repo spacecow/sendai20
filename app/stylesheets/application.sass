@@ -108,6 +108,11 @@ form#login
   a
     margin: 10px 5px 0 0
 
+ul.inline
+  li
+    float: right
+    margin-right: 3px
+
 $frame_height: 450px
 $frame_width: 300px
 $frame_margin: 20px
@@ -205,10 +210,12 @@ div#container
       background: black url("/images/pano2.png")
       padding: 10px
       -webkit-animation: move-city-top 60s 5s infinite linear
-      div#menu
-        a
-          font-size: 110%
-          color: black
+      ul#menu
+        li
+          list-style-type: none
+          a
+            font-size: 110%
+            color: black
         margin-right: 5px
         text-align: right
       div#welcome

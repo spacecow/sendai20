@@ -75,9 +75,9 @@ abac76: !ruby/object:Dooby::Task
   todo: delete locales
 56ac1a: !ruby/object:Dooby::Task 
   todo: add locale duplication check :done
-a91888: !ruby/object:Dooby::Task 
-  todo: change password link
 6aa77f: !ruby/object:Dooby::Task 
   todo: flash on the same place :done
 a7dd7c: !ruby/object:Dooby::Task 
   todo: language link cooler :done
+aef077: !ruby/object:Dooby::Task 
+  todo: change password link :done

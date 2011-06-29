@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can [:create,:reset_password,:update_password], User
+    can [:create,:change_password,:update_password], User
     can :create, Reset
     
     if user

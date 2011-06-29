@@ -22,13 +22,17 @@
       </div>
       <div id="contents">
         <div id="user_nav">
-          <div id="menu">
+          <ul id="menu" class="inline">
             <% if english? %>
-              <%= link_to "日本語", :language => 'ja', :address => @input %>
+              <li><%= link_to "日本語", :language => 'ja', :address => @input %></li>
             <% else %>
-              <%= link_to "English", :language => 'en', :address => @input %>
+              <li><%= link_to "English", :language => 'en', :address => @input %></li>
             <% end %>
-          </div>
+            <% if current_user %>
+              <li><%= link_to change(:password), change_password_user_path(current_user) %> | <li>
+            <% end %>
+          </ul>
+          <div class="clear"></div>
           <% if current_user %>
             <div id="welcome" class="bright shadow">
               <%= t('message.welcome',:user=>current_user.email) %>
