@@ -75,3 +75,7 @@ abac76: !ruby/object:Dooby::Task
   todo: status mask for resets :done
 d3b014: !ruby/object:Dooby::Task 
   todo: flash on the same place
+32f746: !ruby/object:Dooby::Task 
+  todo: delete locales
+56ac1a: !ruby/object:Dooby::Task 
+  todo: add locale duplication check :done

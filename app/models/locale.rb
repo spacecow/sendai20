@@ -1,7 +1,7 @@
 class Locale < ActiveRecord::Base
   has_many :translations
 
-  validates :title, :presence => true
+  validates :title, :presence => true, :uniqueness => true
 end
 
 # == Schema Information
