@@ -298,66 +298,75 @@ div#container div#contents div#user_nav {
   -webkit-animation: move-city-top 60s 5s infinite linear;
 }
 /* line 208, ../../app/stylesheets/application.sass */
+div#container div#contents div#user_nav div#menu {
+  margin-right: 5px;
+  text-align: right;
+}
+/* line 209, ../../app/stylesheets/application.sass */
+div#container div#contents div#user_nav div#menu a {
+  font-size: 110%;
+  color: black;
+}
+/* line 214, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav div#welcome {
   display: block;
   text-align: right;
 }
-/* line 211, ../../app/stylesheets/application.sass */
+/* line 217, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav img {
   float: left;
 }
-/* line 213, ../../app/stylesheets/application.sass */
+/* line 219, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav form {
-  margin-top: 20px;
   float: right;
 }
-/* line 217, ../../app/stylesheets/application.sass */
+/* line 222, ../../app/stylesheets/application.sass */
 div#container div#contents form.list h1 {
   border-bottom: 1px dotted black;
   margin-bottom: 10px;
   margin-top: 10px;
 }
-/* line 221, ../../app/stylesheets/application.sass */
+/* line 226, ../../app/stylesheets/application.sass */
 div#container div#contents form.list h1.first {
   margin-top: 0;
 }
-/* line 223, ../../app/stylesheets/application.sass */
+/* line 228, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li.error {
   background: gray;
 }
-/* line 226, ../../app/stylesheets/application.sass */
+/* line 231, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li.error p.inline-errors {
   margin-left: 160px;
   color: white;
   text-shadow: 1px 1px 1px black;
 }
-/* line 230, ../../app/stylesheets/application.sass */
+/* line 235, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li {
   list-style-type: none;
 }
-/* line 232, ../../app/stylesheets/application.sass */
+/* line 237, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li label {
   float: left;
   width: 150px;
   text-align: right;
   margin: 2px 10px 0 0;
 }
-/* line 237, ../../app/stylesheets/application.sass */
+/* line 242, ../../app/stylesheets/application.sass */
 div#container div#contents form.list input.submit {
   margin: 5px 0 0 160px;
 }
-/* line 239, ../../app/stylesheets/application.sass */
+/* line 244, ../../app/stylesheets/application.sass */
 div#container div#contents form.list input.small_submit {
   margin-top: 10px;
 }
 
 @-webkit-keyframes move-city-top {
-  /* line 243, ../../app/stylesheets/application.sass */
+  /* line 248, ../../app/stylesheets/application.sass */
   from {
     background-position: 0 0;
   }
 
-  /* line 245, ../../app/stylesheets/application.sass */
+  /* line 250, ../../app/stylesheets/application.sass */
   to {
     background-position: -1600px 0;
   }
