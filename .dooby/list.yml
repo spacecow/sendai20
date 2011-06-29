@@ -57,8 +57,6 @@ c04648: !ruby/object:Dooby::Task
   todo: map integration away from javascript :done
 756fd6: !ruby/object:Dooby::Task 
   todo: updating cucumber :done
-a97ea5: !ruby/object:Dooby::Task 
-  todo: login screen cooler
 ac5f5d: !ruby/object:Dooby::Task 
   todo: header layout :done
 d3fab0: !ruby/object:Dooby::Task 
@@ -73,9 +71,13 @@ abac76: !ruby/object:Dooby::Task
   todo: reset password routing :done
 662c82: !ruby/object:Dooby::Task 
   todo: status mask for resets :done
-d3b014: !ruby/object:Dooby::Task 
-  todo: flash on the same place
 32f746: !ruby/object:Dooby::Task 
   todo: delete locales
 56ac1a: !ruby/object:Dooby::Task 
   todo: add locale duplication check :done
+a91888: !ruby/object:Dooby::Task 
+  todo: change password link
+6310bc: !ruby/object:Dooby::Task 
+  todo: language link cooler
+6aa77f: !ruby/object:Dooby::Task 
+  todo: flash on the same place :done

@@ -65,18 +65,20 @@ h1
   font-size: $h1_size
   margin-bottom: 2*$spacing
 
-div#flash_notice
-  float: left  
-  margin-bottom: 5px
-  padding: 3px 10px
-  border: 1px solid black
-  +custom_gradient($notice_light,$notice_dark)
-div#flash_alert
-  float: left
-  margin-bottom: 5px
-  padding: 3px 10px
-  border: 1px solid black
-  +custom_gradient($alert_light,$alert_dark)
+div#flash_container
+  height: 30px
+  div#flash_notice
+    float: left  
+    margin-bottom: 5px
+    padding: 3px 10px
+    border: 1px solid black
+    +custom_gradient($notice_light,$notice_dark)
+  div#flash_alert
+    float: left
+    margin-bottom: 5px
+    padding: 3px 10px
+    border: 1px solid black
+    +custom_gradient($alert_light,$alert_dark)
 
 
 form.inline
@@ -113,7 +115,7 @@ $frame_container_width: $frame_width + 2*$frame_margin
 div#container
   font: normal $font_size "Helvetica Neue", Arial, Helvetica, sans-serif
   width: $main_width
-  margin: 4*$spacing auto
+  margin: $spacing auto
   div#contents
     //height: $contents_height
     padding: $contents_padding_height $contents_padding_width

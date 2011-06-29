@@ -14,10 +14,12 @@
   </head>
   <body>
     <div id="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-        <div class="clear"></div>
-      <% end %>
+      <div id="flash_container">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <div class="clear"></div>
+        <% end %>
+      </div>
       <div id="contents">
         <div id="user_nav">
           <% if english? %>

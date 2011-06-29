@@ -39,7 +39,11 @@ h1 {
 }
 
 /* line 68, ../../app/stylesheets/application.sass */
-div#flash_notice {
+div#flash_container {
+  height: 30px;
+}
+/* line 70, ../../app/stylesheets/application.sass */
+div#flash_container div#flash_notice {
   float: left;
   margin-bottom: 5px;
   padding: 3px 10px;
@@ -60,9 +64,8 @@ div#flash_notice {
   background-image: -ms-linear-gradient(top, #4cc417, #339966);
   background-image: linear-gradient(top, #4cc417, #339966);
 }
-
-/* line 74, ../../app/stylesheets/application.sass */
-div#flash_alert {
+/* line 76, ../../app/stylesheets/application.sass */
+div#flash_container div#flash_alert {
   float: left;
   margin-bottom: 5px;
   padding: 3px 10px;
@@ -84,55 +87,55 @@ div#flash_alert {
   background-image: linear-gradient(top, #ff3333, #993333);
 }
 
-/* line 83, ../../app/stylesheets/application.sass */
+/* line 85, ../../app/stylesheets/application.sass */
 form.inline li {
   float: left;
   margin-right: 5px;
 }
 
-/* line 87, ../../app/stylesheets/application.sass */
+/* line 89, ../../app/stylesheets/application.sass */
 form li {
   list-style-type: none;
 }
-/* line 89, ../../app/stylesheets/application.sass */
+/* line 91, ../../app/stylesheets/application.sass */
 form li input {
   width: 180px;
 }
-/* line 91, ../../app/stylesheets/application.sass */
+/* line 93, ../../app/stylesheets/application.sass */
 form li textarea {
   width: 300px;
   height: 100px;
   resize: none;
 }
-/* line 95, ../../app/stylesheets/application.sass */
+/* line 97, ../../app/stylesheets/application.sass */
 form input.submit {
   margin-top: 5px;
 }
-/* line 98, ../../app/stylesheets/application.sass */
+/* line 100, ../../app/stylesheets/application.sass */
 form li.block label {
   display: block;
 }
-/* line 100, ../../app/stylesheets/application.sass */
+/* line 102, ../../app/stylesheets/application.sass */
 form li.block input {
   display: block;
 }
-/* line 103, ../../app/stylesheets/application.sass */
+/* line 105, ../../app/stylesheets/application.sass */
 form li.big textarea {
   height: 400px;
 }
 
-/* line 106, ../../app/stylesheets/application.sass */
+/* line 108, ../../app/stylesheets/application.sass */
 form#login a {
   margin: 10px 5px 0 0;
 }
 
-/* line 113, ../../app/stylesheets/application.sass */
+/* line 115, ../../app/stylesheets/application.sass */
 div#container {
   font: normal 14px "Helvetica Neue", Arial, Helvetica, sans-serif;
   width: 900px;
-  margin: 40px auto;
+  margin: 10px auto;
 }
-/* line 117, ../../app/stylesheets/application.sass */
+/* line 119, ../../app/stylesheets/application.sass */
 div#container div#contents {
   padding: 20px 20px;
   border: 1px solid black;
@@ -149,7 +152,7 @@ div#container div#contents {
   background-image: -ms-linear-gradient(left, #ffffff, #dddddd 33%, #ffffff);
   background-image: linear-gradient(left, #ffffff, #dddddd 33%, #ffffff);
 }
-/* line 123, ../../app/stylesheets/application.sass */
+/* line 125, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container {
   margin-top: 5px;
   float: left;
@@ -162,7 +165,7 @@ div#container div#contents div#frame_container {
   -khtml-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 129, ../../app/stylesheets/application.sass */
+/* line 131, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame {
   position: relative;
   overflow: hidden;
@@ -170,46 +173,46 @@ div#container div#contents div#frame_container div#frame {
   width: 300px;
   margin: 20px;
 }
-/* line 135, ../../app/stylesheets/application.sass */
+/* line 137, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions {
   position: absolute;
   top: -5px;
 }
-/* line 138, ../../app/stylesheets/application.sass */
+/* line 140, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion {
   border-top: 1px solid gray;
   padding: 5px 0;
   list-style-type: none;
 }
-/* line 142, ../../app/stylesheets/application.sass */
+/* line 144, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion span#username {
   font-weight: bold;
   font-size: 14px;
 }
-/* line 145, ../../app/stylesheets/application.sass */
+/* line 147, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion span#username a {
   font-size: 14px;
 }
-/* line 147, ../../app/stylesheets/application.sass */
+/* line 149, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion span#name {
   font-size: 12px;
   color: gray;
 }
-/* line 150, ../../app/stylesheets/application.sass */
+/* line 152, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion span#ago {
   font-size: 12px;
   color: gray;
 }
-/* line 153, ../../app/stylesheets/application.sass */
+/* line 155, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.opinion:hover {
   background: #eeeeee;
 }
-/* line 155, ../../app/stylesheets/application.sass */
+/* line 157, ../../app/stylesheets/application.sass */
 div#container div#contents div#frame_container div#frame div#opinions div.movie {
   margin-bottom: 450px;
   border-top: none;
 }
-/* line 159, ../../app/stylesheets/application.sass */
+/* line 161, ../../app/stylesheets/application.sass */
 div#container div#contents div#profile_container {
   border: 1px solid black;
   -moz-border-radius: 10px;
@@ -220,45 +223,45 @@ div#container div#contents div#profile_container {
   border-radius: 10px;
   padding: 20px 20px;
 }
-/* line 164, ../../app/stylesheets/application.sass */
+/* line 166, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions {
   width: 300px;
   float: left;
 }
-/* line 167, ../../app/stylesheets/application.sass */
+/* line 169, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion {
   border-bottom: 1px solid gray;
   padding: 5px 0;
   list-style-type: none;
 }
-/* line 171, ../../app/stylesheets/application.sass */
+/* line 173, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#username {
   font-weight: bold;
   font-size: 14px;
 }
-/* line 174, ../../app/stylesheets/application.sass */
+/* line 176, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#username a {
   font-size: 14px;
 }
-/* line 176, ../../app/stylesheets/application.sass */
+/* line 178, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#name {
   font-size: 12px;
   color: gray;
 }
-/* line 179, ../../app/stylesheets/application.sass */
+/* line 181, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li.opinion span#ago {
   font-size: 12px;
   color: gray;
 }
-/* line 182, ../../app/stylesheets/application.sass */
+/* line 184, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li:hover {
   background: #eeeeee;
 }
-/* line 184, ../../app/stylesheets/application.sass */
+/* line 186, ../../app/stylesheets/application.sass */
 div#container div#contents div#opinion_container ul#opinions li:last-child {
   border-bottom: none;
 }
-/* line 186, ../../app/stylesheets/application.sass */
+/* line 188, ../../app/stylesheets/application.sass */
 div#container div#contents div#my_opinion_container {
   margin-top: 5px;
   border: 1px solid black;
@@ -271,90 +274,90 @@ div#container div#contents div#my_opinion_container {
   padding: 20px 20px;
   float: right;
 }
-/* line 190, ../../app/stylesheets/application.sass */
+/* line 192, ../../app/stylesheets/application.sass */
 div#container div#contents div#my_opinion_container div#my_opinion {
   margin: 0;
   padding: 0;
   width: 300px;
 }
-/* line 194, ../../app/stylesheets/application.sass */
+/* line 196, ../../app/stylesheets/application.sass */
 div#container div#contents div#form {
   width: 350px;
   float: right;
   margin: 20px 20px 0 0;
 }
-/* line 199, ../../app/stylesheets/application.sass */
+/* line 201, ../../app/stylesheets/application.sass */
 div#container div#contents div#form form img {
   margin-top: 10px;
 }
-/* line 201, ../../app/stylesheets/application.sass */
+/* line 203, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav {
   height: 100px;
   background: black url("/images/pano2.png");
   padding: 10px;
   -webkit-animation: move-city-top 60s 5s infinite linear;
 }
-/* line 206, ../../app/stylesheets/application.sass */
+/* line 208, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav div#welcome {
   display: block;
   text-align: right;
 }
-/* line 209, ../../app/stylesheets/application.sass */
+/* line 211, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav img {
   float: left;
 }
-/* line 211, ../../app/stylesheets/application.sass */
+/* line 213, ../../app/stylesheets/application.sass */
 div#container div#contents div#user_nav form {
   margin-top: 20px;
   float: right;
 }
-/* line 215, ../../app/stylesheets/application.sass */
+/* line 217, ../../app/stylesheets/application.sass */
 div#container div#contents form.list h1 {
   border-bottom: 1px dotted black;
   margin-bottom: 10px;
   margin-top: 10px;
 }
-/* line 219, ../../app/stylesheets/application.sass */
+/* line 221, ../../app/stylesheets/application.sass */
 div#container div#contents form.list h1.first {
   margin-top: 0;
 }
-/* line 221, ../../app/stylesheets/application.sass */
+/* line 223, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li.error {
   background: gray;
 }
-/* line 224, ../../app/stylesheets/application.sass */
+/* line 226, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li.error p.inline-errors {
   margin-left: 160px;
   color: white;
   text-shadow: 1px 1px 1px black;
 }
-/* line 228, ../../app/stylesheets/application.sass */
+/* line 230, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li {
   list-style-type: none;
 }
-/* line 230, ../../app/stylesheets/application.sass */
+/* line 232, ../../app/stylesheets/application.sass */
 div#container div#contents form.list li label {
   float: left;
   width: 150px;
   text-align: right;
   margin: 2px 10px 0 0;
 }
-/* line 235, ../../app/stylesheets/application.sass */
+/* line 237, ../../app/stylesheets/application.sass */
 div#container div#contents form.list input.submit {
   margin: 5px 0 0 160px;
 }
-/* line 237, ../../app/stylesheets/application.sass */
+/* line 239, ../../app/stylesheets/application.sass */
 div#container div#contents form.list input.small_submit {
   margin-top: 10px;
 }
 
 @-webkit-keyframes move-city-top {
-  /* line 241, ../../app/stylesheets/application.sass */
+  /* line 243, ../../app/stylesheets/application.sass */
   from {
     background-position: 0 0;
   }
 
-  /* line 243, ../../app/stylesheets/application.sass */
+  /* line 245, ../../app/stylesheets/application.sass */
   to {
     background-position: -1600px 0;
   }
