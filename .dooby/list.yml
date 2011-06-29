@@ -73,3 +73,5 @@ abac76: !ruby/object:Dooby::Task
   todo: reset password routing :done
 662c82: !ruby/object:Dooby::Task 
   todo: status mask for resets :done
+d3b014: !ruby/object:Dooby::Task 
+  todo: flash on the same place

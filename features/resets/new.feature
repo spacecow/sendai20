@@ -27,4 +27,3 @@ And 1 resets should exist
 And I should be on the root page
 And I should see "Instructions of how to reset your password has been sent to your email." as notice flash message
 And 1 email should be delivered to jsveholm@gmail.com
-Then show me the emails

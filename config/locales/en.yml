@@ -40,8 +40,10 @@ en:
     view: "View %{obj}"
     view_own: "View own %{obj}"
   alert:
+    doesnt_match: "doesn't match"
     invalid_login_or_password: "Invalid login or password."
     incorrect: "%{obj} incorrect."
+    non_registered_email: "not a registered email"
     unauthorized_access: "Unauthorized access."
   notice:
     logged_in: "You are now logged in."

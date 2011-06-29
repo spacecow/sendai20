@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   def full_address; "#{prefecture}#{address}" end
 
   def old_password_check
-    errors.add(:old_password, "doesn't match") unless self.password_hash == encrypt_password(old_password)
+    errors.add(:old_password, I18n.t("alert.doesnt_match")) unless self.password_hash == encrypt_password(old_password)
   end
 
   def prepare_password

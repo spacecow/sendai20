@@ -22,7 +22,7 @@ class Reset < ActiveRecord::Base
   private
     def generate_code; self.code = Digest::SHA1.hexdigest([ Time.now, rand].join) end
     def registered_email?
-      errors.add(:email, "not a registered email") unless User.find_by_email(email)
+      errors.add(:email, I18n.t("alert.non_registered_email")) unless User.find_by_email(email)
     end
     def save_user; self.user_id = User.find_by_email(email).id end
 end
