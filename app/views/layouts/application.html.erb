@@ -29,7 +29,7 @@
               <li><%= link_to "English", :language => 'en', :address => @input %></li>
             <% end %>
             <% if current_user %>
-              <li><%= link_to change(:password), change_password_user_path(current_user) %> | <li>
+              <li><%= link_to edit(:profile), edit_user_path(current_user) %> | <li>
             <% end %>
           </ul>
           <div class="clear"></div>

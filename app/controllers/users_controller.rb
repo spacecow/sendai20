@@ -59,7 +59,9 @@ class UsersController < ApplicationController
   end
 
   def change_password
-    unless current_user && (current_user == @user or admin? or god?)
+    if current_user && (current_user == @user or admin? or god?)
+      redirect_to edit_user_path(current_user)
+    else
       @reset = Reset.find_by_code(params[:code])
       if @reset and @reset.user == @user and @reset.no_status? :used
       elsif @reset and @reset.status? :used
@@ -76,7 +78,7 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         redirect_to root_url, :notice => join(changed(:password),notify(:logged_in))
       else
-        render 'change_password'
+        render 'edit'
       end
     else
       @reset = Reset.find_by_code(params[:code])

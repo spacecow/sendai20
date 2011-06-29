@@ -81,3 +81,7 @@ a7dd7c: !ruby/object:Dooby::Task
   todo: language link cooler :done
 aef077: !ruby/object:Dooby::Task 
   todo: change password link :done
+8cb8ba: !ruby/object:Dooby::Task 
+  todo: edit profile link
+e880db: !ruby/object:Dooby::Task 
+  todo: make change password a part of edit profile :done

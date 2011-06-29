@@ -1,4 +1,14 @@
-<% title edit(:profile) %>
-
-<%= render 'form' %>
-
+<div id="form">
+  <%= semantic_form_for @user, :html => {:class => "list"} do |f| %>
+    <h1 class="first"><%= t(:personal_info) %></h1>
+    <%= f.input :name %>
+    <%# f.input :username %>
+    <%= f.input :email, :label => ft(:email)+'*' %>
+    <%= f.input :prefecture, :as => :select, :collection => User::PREFECTURES %>
+    <%= f.input :address %>
+    <%= image_tag @map_url unless @map_url.nil? %>
+    <%= f.submit (@user.new_record? ? t(:sign_up) : update(:profile)), :class => :submit %>
+  <% end %>
+  <%= render 'users/change_password_form' %>
+</div>
+<div class="clear"></div>

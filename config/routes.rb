@@ -18,11 +18,11 @@ Sendai20::Application.routes.draw do
   match 'user/edit' => 'users#edit', :as => :edit_current_user
   match 'signup' => 'users#new', :as => :signup
   match 'logout' => 'sessions#destroy', :as => :logout
-  match 'login' => 'sessions#new', :as => :login
+#  match 'login' => 'sessions#new', :as => :login
 
   resources :opinions, :only => [:create,:update]
   resources :sessions
-  resources :users do
+  resources :users, :except => :new do
     member do
       get 'edit_roles'
       put 'update_roles'
