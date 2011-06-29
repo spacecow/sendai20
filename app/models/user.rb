@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
     ROLES.reject { |r| ((roles_mask || 0) & 2**ROLES.index(r)).zero? }
   end
   def set_role; self.roles = ["member"] if self.roles.empty? end
-  
+
   def self.authenticate(login, pass)
     user = find_by_email(login)
     return user if user && user.password_hash == user.encrypt_password(pass)

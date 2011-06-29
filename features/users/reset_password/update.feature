@@ -29,5 +29,10 @@ And I fill in "Password" with "new_password"
 And I press "Login"
 Then I should see "Successfully logged in." as notice flash message
 
-@pending
 Scenario: Reset can only be used once
+When I go to that user's reset_password page with that reset
+And I fill in "New Password*" with "new_password"
+And I fill in "New Password Confirmation" with "new_password"
+And I press "Update"
+Then a reset should exist with status_mask: 1
+And 1 resets should exist

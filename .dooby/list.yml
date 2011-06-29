@@ -71,3 +71,5 @@ abac76: !ruby/object:Dooby::Task
   todo: mail resets :done
 6ce151: !ruby/object:Dooby::Task 
   todo: reset password routing :done
+662c82: !ruby/object:Dooby::Task 
+  todo: status mask for resets :done

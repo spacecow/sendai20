@@ -6,8 +6,18 @@ class Reset < ActiveRecord::Base
 
   before_create :save_user, :generate_code
 
-  validates_presence_of :email
-  validate :registered_email?
+  validates_presence_of :email, :on => :create
+  validate :registered_email?, :on => :create
+
+  STATUS = %w(used)
+
+  def no_status?(stat); !(status? stat) end
+  def status?(stat); status.include? stat.to_s end
+  def status; STATUS.reject {|e| ((status_mask || 0) & 2**STATUS.index(e)).zero?} end
+  def status=(stats)
+    stats = stats.split(', ') if stats.instance_of? String
+    self.status_mask = (stats & STATUS).map{|e| 2**STATUS.index(e)}.sum 
+  end  
 
   private
     def generate_code; self.code = Digest::SHA1.hexdigest([ Time.now, rand].join) end
