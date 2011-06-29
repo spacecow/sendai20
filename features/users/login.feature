@@ -18,3 +18,10 @@ Scenario: Links in the login section
 When I go to the root page
 And I follow "Forgot Password?" within the "login" form
 Then I should be on the new reset page
+
+Scenario: Wrong login
+When I go to the root page
+And I fill in "Login" with "some@email.com"
+And I fill in "Password" with "wrong"
+And I press "Login"
+Then I should see "Invalid login or password" as alert flash message

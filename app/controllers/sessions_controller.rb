@@ -9,7 +9,11 @@ class SessionsController < ApplicationController
       redirect_to_target_or_default root_url, :notice => success(:logged_in)
     else
       flash.now[:alert] = t('alert.invalid_login_or_password')
-      render :action => 'new'
+      @opinions = Opinion.order("updated_at desc")
+      @opinions = @opinions.where("user_id <> ?",current_user.id) if current_user
+      @opinions = @opinions.limit(1)
+      @user = User.new
+      render :action => 'operator/movie'
     end
   end
 
