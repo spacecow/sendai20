@@ -1,14 +1,33 @@
 Feature:
 Background:
-Given a user exists with email: "example@mail.com"
+Given a user exists with email: "example@mail.com", password: "abc123"
 And a reset exists with email: "example@mail.com"
-When I go to that user's reset_password page with that reset
 
-Scenario: Update Password
-When I fill in "New Password*" with "new_password"
+Scenario: Update Password with key
+When I go to that user's reset_password page with that reset
+And I fill in "New Password*" with "new_password"
 And I fill in "New Password Confirmation" with "new_password"
 And I press "Update"
 Then I should see "Successfully changed password. You are now logged in." as notice flash message
+When I press "Logout"
+And I fill in "Login" with "example@mail.com"
+And I fill in "Password" with "new_password"
+And I press "Login"
+Then I should see "Successfully logged in." as notice flash message
+
+Scenario: Update Password for member
+Given I am logged in as that user
+When I go to that user's reset_password page
+And I fill in "Old Password" with "abc123"
+And I fill in "New Password*" with "new_password"
+And I fill in "New Password Confirmation" with "new_password"
+And I press "Update"
+Then I should see "Successfully changed password. You are now logged in." as notice flash message
+When I press "Logout"
+And I fill in "Login" with "example@mail.com"
+And I fill in "Password" with "new_password"
+And I press "Login"
+Then I should see "Successfully logged in." as notice flash message
 
 @pending
-Scenario: Update for regular user
+Scenario: Reset can only be used once

@@ -4,9 +4,9 @@ class User < ActiveRecord::Base
   has_many :resets
 
   # new columns need to be added here to be writable through mass assignment
-  attr_accessible :email, :password, :password_confirmation, :name, :prefecture, :address
+  attr_accessible :email, :password, :password_confirmation, :name, :prefecture, :address, :update_password, :old_password, :update_password_with_key
 
-  attr_accessor :password, :old_password
+  attr_accessor :password, :old_password, :update_password, :update_password_with_key
   before_create :set_role
   before_save :prepare_password
   geocoded_by :full_address
@@ -18,6 +18,9 @@ class User < ActiveRecord::Base
   validates_presence_of :password, :on => :create
   validates_confirmation_of :password
   validates_length_of :password, :minimum => 4, :allow_blank => true
+  validates_presence_of :password, :if => :update_password
+  validates_presence_of :password, :if => :update_password_with_key
+  validate :old_password_check, :if => :update_password
 
   ROLES = %w(god admin mini_admin member)
   PREFECTURES = ["北海道", "青森県", "秋田県", "岩手県", "新潟県", "山形県", "宮城県", "石川県", "富山県", "栃木県", "福島県", "福井県", "長野県", "群馬県", "埼玉県", "茨城県", "島根県", "鳥取県", "兵庫県", "京都府", "滋賀県", "岐阜県", "山梨県", "東京都", "千葉県", "山口県", "広島県", "岡山県", "大阪府", "奈良県", "愛知県", "静岡県", "神奈川県", "佐賀県", "福岡県", "和歌山県", "三重県", "長崎県", "熊本県", "大分県", "愛媛県", "香川県", "鹿児島県", "宮崎県", "高知県", "徳島県", "沖縄県"]
@@ -45,6 +48,10 @@ class User < ActiveRecord::Base
   private
 
   def full_address; "#{prefecture}#{address}" end
+
+  def old_password_check
+    errors.add(:old_password, "doesn't match") unless self.password_hash == encrypt_password(old_password)
+  end
 
   def prepare_password
     unless password.blank?

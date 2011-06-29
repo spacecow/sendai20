@@ -12,4 +12,4 @@ Then I should see a user password error "doesn't match confirmation"
 Scenario: The new password cannot be blank
 When I fill in "New Password*" with ""
 And I press "Update"
-Then I should see "Password cannot be set blank." as alert flash message 
+Then I should see a user password error "can't be blank"

@@ -20,3 +20,10 @@ And a reset exists with email: "example@mail.com"
 When I go to user: "second"'s reset_password page with that reset
 Then I should be on the welcome page
 And I should see "You are not authorized to access this page." as alert flash message
+
+Scenario: A key that aleady have been used cannot be used again
+Given a reset exists with status_mask: 1, email: "example@mail.com"
+Then a reset should exist with status_mask: 1 
+
+@pending
+Scenario: Expiration date

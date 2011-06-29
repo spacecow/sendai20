@@ -70,6 +70,8 @@ class UsersController < ApplicationController
   def update_password
     if current_user && (current_user == @user or admin? or god?)
       if @user.update_attributes(params[:user])
+        session[:user_id] = @user.id
+        redirect_to root_url, :notice => join(changed(:password),notify(:logged_in))
       else
         render 'reset_password'
       end
