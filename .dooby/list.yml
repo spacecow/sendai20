@@ -45,8 +45,6 @@ a143d5: !ruby/object:Dooby::Task
   todo: add ward :done
 23fab6: !ruby/object:Dooby::Task 
   todo: one address field :done
-a43af3: !ruby/object:Dooby::Task 
-  todo: prefecture and address cannot be blank
 6fba22: !ruby/object:Dooby::Task 
   todo: be able to choose language in user profile
 87eaec: !ruby/object:Dooby::Task 
@@ -59,8 +57,6 @@ c04648: !ruby/object:Dooby::Task
   todo: updating cucumber :done
 ac5f5d: !ruby/object:Dooby::Task 
   todo: header layout :done
-d3fab0: !ruby/object:Dooby::Task 
-  todo: edit profile
 80bdac: !ruby/object:Dooby::Task 
   todo: " :done"
 abac76: !ruby/object:Dooby::Task 
@@ -81,7 +77,5 @@ a7dd7c: !ruby/object:Dooby::Task
   todo: language link cooler :done
 aef077: !ruby/object:Dooby::Task 
   todo: change password link :done
-8cb8ba: !ruby/object:Dooby::Task 
-  todo: edit profile link
 e880db: !ruby/object:Dooby::Task 
   todo: make change password a part of edit profile :done

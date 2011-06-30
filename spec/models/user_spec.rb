@@ -3,10 +3,11 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe User do
   def new_user(attributes = {})
     attributes[:name] ||= "Some Name"
-    attributes[:username] ||= 'foo'
     attributes[:email] ||= 'foo@example.com'
     attributes[:password] ||= 'abc123'
     attributes[:password_confirmation] ||= attributes[:password]
+    attributes[:prefecture] ||= "Arkansas"
+    attributes[:address] ||= "City Street 23"
     User.new(attributes)
   end
 
@@ -16,10 +17,6 @@ describe User do
 
   it "should be valid" do
     new_user.should be_valid
-  end
-
-  it "should require username" do
-    new_user(:username => '').should have(1).error_on(:username)
   end
 
   it "should require password" do
@@ -35,15 +32,6 @@ describe User do
     new_user(:email => 'bar@example.com').should have(1).error_on(:email)
   end
 
-  it "should validate uniqueness of username" do
-    new_user(:username => 'uniquename').save!
-    new_user(:username => 'uniquename').should have(1).error_on(:username)
-  end
-
-  it "should not allow odd characters in username" do
-    new_user(:username => 'odd ^&(@)').should have(1).error_on(:username)
-  end
-
   it "should validate password is longer than 3 characters" do
     new_user(:password => 'bad').should have(1).error_on(:password)
   end
@@ -57,12 +45,6 @@ describe User do
     user.save!
     user.password_hash.should_not be_nil
     user.password_salt.should_not be_nil
-  end
-
-  it "should authenticate by username" do
-    user = new_user(:username => 'foobar', :password => 'secret')
-    user.save!
-    User.authenticate('foobar', 'secret').should == user
   end
 
   it "should authenticate by email" do

@@ -21,7 +21,7 @@ When I go to that user's change_password page
 And I fill in "Old Password" with "abc123"
 And I fill in "New Password*" with "new_password"
 And I fill in "New Password Confirmation" with "new_password"
-And I press "Update"
+And I press "Update Password"
 Then I should see "Successfully changed password. You are now logged in." as notice flash message
 When I press "Logout"
 And I fill in "Login" with "example@mail.com"
