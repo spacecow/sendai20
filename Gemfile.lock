@@ -97,7 +97,7 @@ GEM
     mime-types (1.16)
     mocha (0.9.12)
     mysql2 (0.2.7)
-    nokogiri (1.4.6)
+    nokogiri (1.4.7)
     pickle (0.4.7)
       cucumber (>= 0.8)
       rake
@@ -147,7 +147,7 @@ GEM
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.28)
+    tzinfo (0.3.29)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
